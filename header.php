@@ -45,7 +45,7 @@
 						        <li>
 						        <li><a href="main_page.php">Cadastrar Produto |</a></li>
 								<li><a href="xxx.php">Nossos Produtos |</a></li>
-								<li><a href="sobreshoes.html">Sobre Nós |</a></li>
+								<li><a href="about.php">Sobre Nós |</a></li>
 								<li><a href="main_page.php">Página do Funcionário</a></li>
 							</ul>
 						</nav>
