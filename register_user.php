@@ -2,7 +2,6 @@
 <body>
 	<div>
 		<form action="sign_up.php" method="POST">
-				<img src="imagens/logo.jpg">
 			<h1>Cadastrar Funcionário:</h1>
 		    Usuário <input type="text" name="usuario">
 		    Email <input type="text" name="email">
