@@ -3,7 +3,6 @@
 <body>
 	<div>
 	<form action="check_login.php" method="POST">
-			<img src="imagens/logo.jpg">
 			<h1>Login:</h1>
 	       Usuário ou Email<input type="text" name="login">
 	       Senha <input type="password" name="senha"> <br><br>
