@@ -1,10 +1,9 @@
 <?php 
 	include 'header.php';
 ?> 
-	<head>
-		<link rel="stylesheet" type="text/css" href="css/sobreshoes.css">
-	</head>
+		
 	<body>
+	   <link rel="stylesheet" type="text/css" href="css/sobreshoes.css">
 	 	<div>
 			 <h2>Descrição do Projeto:</h2>
 			 <p> O EasyShoes é uma WPA criada com o intuito de facilitar a vida e a venda dos vendedores de sapatarias. <br> Com o sistema é possível verificar a disponibilidade, quantidade, numeração e setor onde o produto se encontra, diminuindo o tempo de espera e garantindo um atendimento mais rápido para o cliente.</p>
