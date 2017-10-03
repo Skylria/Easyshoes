@@ -8,10 +8,9 @@ if ($_SESSION['logado'] != true) {
 }
 $produtos = $_SESSION['produtos'];
 ?>
-	<head>
-		<link rel="stylesheet" type="text/css" href="css/cadastro.css">		
-	</head>
+				
 	<body>
+	  <link rel="stylesheet" type="text/css" href="css/cadastro.css">	
 		<div>
 			<?php if (!$produtos): ?>
 				<h2>Nenhum Produto Cadastrado :( </h2>
