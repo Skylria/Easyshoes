@@ -30,7 +30,7 @@ $produtos = $_SESSION['produtos'];
 						</tr>
 				<?php endif ?>
 				
-				<?php foreach ($produtos as $array => $dado): ?>
+				<?php foreach ($produtos as $array => $dado):sort($_SESSION['produtos']); ?>
 						<tr>
 					        <td><?=$dado[0]?></td>
 					        <td><?=$dado[1]?></td>
