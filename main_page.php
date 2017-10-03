@@ -8,7 +8,6 @@ if ($_SESSION['logado'] != true) {
 }
 $produtos = $_SESSION['produtos'];
 ?>
-<html>	
 	<head>
 		<link rel="stylesheet" type="text/css" href="css/cadastro.css">		
 	</head>

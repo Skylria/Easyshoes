@@ -6,8 +6,7 @@ if (!isset ($_SESSION['produtos']) ) {
 if ($_SESSION['logado'] != true) {
 	header('location: login.php');
 }
-?> 	
-<html>
+?> 
 	<head>
 		<link rel="stylesheet" type="text/css" href="css/cadastro.css">	
 	</head>
