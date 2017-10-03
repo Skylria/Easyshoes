@@ -17,7 +17,7 @@ if ($_SESSION['logado'] != true) {
 				<h2>Modelo: <input type="text" name="modelo"></h2>
 				<h2>Tamanho: <input type="tamanho" name="duracao"></h2>
 				<h2>Cor: <input type="text" name="cor"></h2>
-				<h2>Quantidade: <input type="text" name="quantidade"></h2>
+				<h2>Quantidade: <input type="number" name="quantidade"></h2>
 				<input class="button" type="submit" value="CADASTRAR">
 			</form>
 		</div>
