@@ -7,12 +7,10 @@ if ($_SESSION['logado'] != true) {
 	header('location: login.php');
 }
 ?> 
-	<head>
-		<link rel="stylesheet" type="text/css" href="css/cadastro.css">	
-	</head>
+	
 	<body>
+	  <link rel="stylesheet" type="text/css" href="css/cadastro.css">	
 		<div>
-			
 			<h1>CADASTRAR NOVO PRODUTO: </h1>
 			<form action="process_product.php" method="POST">
 				<h2>Marca: <input type="text" name="marca"></h2>
