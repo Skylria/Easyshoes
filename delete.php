@@ -1,9 +1,7 @@
 <?php
-
 session_start();
 $id = $_GET['id'];
-unset($_SESSION['sapatos'][$id]); // remover algo de um array
-
+unset($_SESSION['produtos'][$id]);
 header('location: main_page.php');
 
 ?>

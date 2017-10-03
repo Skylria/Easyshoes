@@ -1,4 +1,10 @@
-<?php include 'header.php';?> 	
+<?php 
+	include 'header.php';
+?> 	
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="css/sobreshoes.css">
+	</head>
 	<body>
 	 	<div>
 			 <h2>Descrição do Projeto:</h2>
@@ -33,8 +39,7 @@
 			 <p>Lucas Walcemberg Otacílio da Silva - IFPE CAMPUS OLINDA - <b> walcemberglucas@gmail.com</b></p><br>
 			 <p>Projeto da disciplina Projeto e Prática 1 do curso IPI - Informática Para Internet. <br>
 			 Professor e orientador: Alexandre Vianna - Alexandrevianna.net</p> <br>
-	
-		<link rel="stylesheet" type="text/css" href="css/sobreshoes.css">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0"></div>
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		</div>
 	</body>
 </html> 
