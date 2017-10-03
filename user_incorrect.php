@@ -1,10 +1,8 @@
 <?php 
 	include 'header.php';
 ?>
-	<head>
-		<link rel="stylesheet" type="text/css" href="css/cadastro.css">
-	</head>
 	<body>
+	  <link rel="stylesheet" type="text/css" href="css/cadastro.css">
 		<div>
 			<h1>Ops! O usuário ou a senha estão incorretos.</h1>
 			<h1>Você é cadastrado(a)?</h1>
