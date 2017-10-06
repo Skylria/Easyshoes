@@ -17,7 +17,7 @@
 			    <input class="button" type="submit" value="cadastrar"> 
 			</form>
 			<h1>Já é cadastrado(a)?</h1>
-		    <a class="button" href="login.php">Faça o Login!</a>
+		    <a class="button" href="index.php">Faça o Login!</a>
 		</div>
 	</body>
 </html>

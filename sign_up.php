@@ -7,5 +7,5 @@ $senha = $_POST['senha'];
  	$_SESSION['usuario'] = array();
  }
 array_push($_SESSION['usuario'], [$usuario, $email, $senha]);
-header('location:login.php');
+header('location:index.php');
 ?>
