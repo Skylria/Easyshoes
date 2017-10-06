@@ -26,7 +26,7 @@ if (!isset ($_SESSION['logado']) ) {
 						<li><a class="nh1" href="logout.php"> DESLOGAR</a></li>
 					<?php endif ?>
 					<?php if($_SESSION['logado']== false): ?>
-						<li><a class="nh1" href="index.php"> FAZER LOGIN</a></li>
+						<li><a class="nh1" href="login.php"> FAZER LOGIN</a></li>
 					<?php endif ?>
 				</ul>
 				</nav>
