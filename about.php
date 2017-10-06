@@ -37,7 +37,6 @@
 			 <p>Lucas Walcemberg Otacílio da Silva - IFPE CAMPUS OLINDA - <b> walcemberglucas@gmail.com</b></p><br>
 			 <p>Projeto da disciplina Projeto e Prática 1 do curso IPI - Informática Para Internet. <br>
 			 Professor e orientador: Alexandre Vianna - Alexandrevianna.net</p> <br>
-			<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		</div>
 	</body>
 <?php include "footer1.php" ?>
