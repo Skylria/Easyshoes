@@ -4,7 +4,7 @@ if (!isset ($_SESSION['produtos']) ) {
 	$_SESSION['produtos'] = array();
 }
 if ($_SESSION['logado'] != true) {
-	header('location: index.php');
+	header('location: login.php');
 }
 $produtos = $_SESSION['produtos'];
 ?>
