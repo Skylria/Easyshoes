@@ -48,5 +48,5 @@ $produtos = $_SESSION['produtos'];
 			<?php endif ?>
 		</div>
 	</body>
-<?php include "footer1.php" ?>
+<?php include "footer.php" ?>
 
