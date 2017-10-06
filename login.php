@@ -18,5 +18,5 @@
 		    <a class="button" href="register_user.php">Cadastre-se!</a>
 		</div>
   	</body>
-<?php include "footer1.php" ?>
+<?php include "footer.php" ?>
 
