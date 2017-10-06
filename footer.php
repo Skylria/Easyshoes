@@ -19,7 +19,7 @@
 			</p>
 		
 			<small style="float: right;">Easyshoes.com © 2017 </small>
-			<link rel="stylesheet" type="text/css" href="footer.css">
+			<link rel="stylesheet" type="text/css" href="css/footer.css">
 		</div>
 	</footer>
 </html>
