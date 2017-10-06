@@ -22,4 +22,5 @@ if ($_SESSION['logado'] != true) {
 			</form>
 		</div>
 	</body>
-</html>
+<?php include "footer.php" ?>
+
