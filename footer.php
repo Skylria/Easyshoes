@@ -14,7 +14,7 @@
 			<p class="p">
 				<img src="facebook.png"> Facebook &nbsp;&nbsp;
 				<a href="">easyshoes@live.com </a>&nbsp;&nbsp;&nbsp;
-				<img src="whatsapp.png"> Whatsapp 
+				<img src="whatsap.png"> Whatsapp 
 				<a href="">(31)813546-0849</a>
 			</p>
 		
