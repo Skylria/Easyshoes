@@ -39,5 +39,5 @@
 			 Professor e orientador: Alexandre Vianna - Alexandrevianna.net</p> <br>
 		</div>
 	</body>
-<?php include "footer1.php" ?>
+<?php include "footer.php" ?>
 
