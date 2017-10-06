@@ -20,4 +20,4 @@
 		    <a class="button" href="index.php">Faça o Login!</a>
 		</div>
 	</body>
-</html>
+<?php include "footer.php" ?>
