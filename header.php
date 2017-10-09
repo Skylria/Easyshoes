@@ -31,4 +31,3 @@ if (!isset ($_SESSION['logado']) ) {
 				</ul>
 				</nav>
 		</header>
-		

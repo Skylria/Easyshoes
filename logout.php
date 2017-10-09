@@ -2,6 +2,6 @@
 session_start();
 
 $_SESSION['logado'] = false;
-header('location: login.php');
+header('location: index.php');
 
 ?>
