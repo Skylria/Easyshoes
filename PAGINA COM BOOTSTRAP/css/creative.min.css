@@ -13,6 +13,11 @@ body,html{
  hr.light{
  	border-color:white;
  }
+ .hr2{
+ 	max-width:3000px;
+ 	border-width:3px;
+ 	border-color:orangered;
+ }
  a{
  	color:#f05f40;
  	-webkit-transition:all .2s;
