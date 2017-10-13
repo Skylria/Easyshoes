@@ -36,7 +36,7 @@
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#contact">Sobre Nós</a>
             </li>
-              <li class="nav-item"><a class="nav-link js-scroll-trigger" href="produtos.html">Nossos Produtos</a></li>
+              <li class="nav-item"><a class="nav-link js-scroll-trigger" href="produtos.php">Nossos Produtos</a></li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="login/login.php">Login (funcionários)</a>
             </li>
