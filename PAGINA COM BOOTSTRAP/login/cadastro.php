@@ -15,6 +15,8 @@
 	<div class="login">
 	<h1>Cadastro: </h1>
     <form method="post">
+	<input type="text" name="nome" placeholder="Nome" required="required" />
+	<input type="number" name="cpf" placeholder="CPF" required="required" />
     	<input type="text" name="usuario" placeholder="Usuario" required="required" />
     	<input type="email" name="email" placeholder="Email" required="required" />
         <input type="password" name="senha" placeholder="Senha" required="required" />
