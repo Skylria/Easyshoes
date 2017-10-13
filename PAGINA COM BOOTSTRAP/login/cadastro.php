@@ -18,7 +18,7 @@
     	<input type="text" name="usuario" placeholder="Usuario" required="required" />
     	<input type="email" name="email" placeholder="Email" required="required" />
         <input type="password" name="senha" placeholder="Senha" required="required" />
-        <button type="submit" class="btn btn-primary btn-block btn-large"><a href="login.html">Cadastrar
+        <button type="submit" class="btn btn-primary btn-block btn-large"><a href="login.php">Cadastrar
 		<i style="color:green; font-size: 2em" class="fa fa-check"></i></a>
 	</button>
     </form>
