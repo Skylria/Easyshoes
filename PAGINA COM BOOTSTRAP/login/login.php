@@ -17,7 +17,8 @@
     <form method="post">
     	<input type="text" name="u" placeholder="Usuario ou Email" required="required" />
         <input type="password" name="p" placeholder="Senha" required="required" />
-        <button type="submit" class="btn btn-primary btn-block btn-large">Fazer Login</button>
+        <button type="submit" class="btn btn-primary btn-block btn-large"><a href="cadastro_sapato.php" style="text-decoration: none;">Fazer Login
+	</a></button>
     </form>
    	<h1 align="center">Não é cadastrado(a)?</h1>
    	<a class="btn btn-primary btn-block btn-large" href="cadastro.php">Cadastre-se</a>
