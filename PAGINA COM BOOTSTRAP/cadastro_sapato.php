@@ -17,7 +17,7 @@
          	<input type="text" name="marca" placeholder="Marca" required="required" />
          	<input type="number" name="setor" placeholder="Setor" required="required" />
          	<input type="number" name="quantidade" placeholder="Quantidade" required="required" />
-         	<button type="submit" class="btn btn-primary btn-block btn-large"><a href="produtos.html">Cadastrar</a></button>
+         	<button type="submit" class="btn btn-primary btn-block btn-large"><a href="produtos.php">Cadastrar</a></button>
      	</form>
    </div>
  </body>
