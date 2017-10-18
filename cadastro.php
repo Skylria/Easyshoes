@@ -14,15 +14,15 @@
 	<h1 class="es">EasyShoes</h1>
 	<div class="login">
 	<h1>Cadastro: </h1>
-    <form method="post">
-	<input type="text" name="nome" placeholder="Nome" required="required" />
-	<input type="number" name="cpf" placeholder="CPF" required="required" />
-    	<input type="text" name="usuario" placeholder="Usuario" required="required" />
-    	<input type="email" name="email" placeholder="Email" required="required" />
-        <input type="password" name="senha" placeholder="Senha" required="required" />
-        <button type="submit" class="btn btn-primary btn-block btn-large"><a href="login.php">Cadastrar
-		<i style="color:green; font-size: 2em" class="fa fa-check"></i></a>
-	</button>
+    <form method="post" action="post.php">
+      <input type="text" name="nome" placeholder="Nome" required="required" />
+      <input type="number" name="cpf" placeholder="CPF(Apenas números)" required="required" />
+      <input type="text" name="usuario" placeholder="Usuario" required="required" />
+      <input type="email" name="email" placeholder="Email" required="required" />
+      <input type="date" name="data" placeholder="Data de Nascimento" required="required" />
+      <input type="reset" name="apagar" placeholder="Apagar Dados" required="required" />
+      <input type="submit" class="btn btn-primary btn-block btn-large" name="cadastrar">
+      <i style="color:green; font-size: 2em" class="fa fa-check"></i></a>
     </form>
 </div>
   <script  src="jslogin/index.js"></script>
