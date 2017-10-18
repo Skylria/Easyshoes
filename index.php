@@ -38,7 +38,7 @@
             </li>
               <li class="nav-item"><a class="nav-link js-scroll-trigger" href="produtos.php">Nossos Produtos</a></li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="login/login.php">Login (funcionários)</a>
+              <a class="nav-link js-scroll-trigger" href="login.php">Login (funcionários)</a>
             </li>
           </ul>
         </div>

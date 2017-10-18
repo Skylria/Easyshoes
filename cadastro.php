@@ -5,7 +5,7 @@
   <title>Cadastro - EasyShoes</title>
   
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="csslogin/style.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
 
 </head>
@@ -25,7 +25,7 @@
 	</button>
     </form>
 </div>
-  <script  src="js/index.js"></script>
+  <script  src="jslogin/index.js"></script>
 
 </body>
 </html>
