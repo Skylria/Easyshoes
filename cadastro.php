@@ -20,6 +20,7 @@
       <input type="text" name="usuario" placeholder="Usuario" required="required" />
       <input type="email" name="email" placeholder="Email" required="required" />
       <input type="date" name="data" placeholder="Data de Nascimento" required="required" />
+      <input type="password" name="senha" placeholder="Senha" required="required" />
       <input type="reset" name="apagar" placeholder="Apagar Dados" required="required" />
       <input type="submit" class="btn btn-primary btn-block btn-large" name="cadastrar">
       <i style="color:green; font-size: 2em" class="fa fa-check"></i></a>
