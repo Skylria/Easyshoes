@@ -14,7 +14,7 @@
 	<h1 class="es">EasyShoes</h1>
 	<div class="login">
 	<h1>Cadastro: </h1>
-    <form method="post" action="post.php">
+    <form method="post" action="conexao.php">
       <input type="text" name="nome" placeholder="Nome" required="required" />
       <input type="number" name="cpf" placeholder="CPF(Apenas números)" required="required" />
       <input type="text" name="usuario" placeholder="Usuario" required="required" />
