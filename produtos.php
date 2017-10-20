@@ -1,19 +1,9 @@
-<?php
-session_start();
-if (!isset($_SESSION['produtos'])){
-  $_SESSION['produtos']= array();
-}
-?>
 <!DOCTYPE html>
 <html lang="en">
 
   <head>
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
     <title>Nossos Produtos</title>
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -21,7 +11,6 @@ if (!isset($_SESSION['produtos'])){
     <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
     <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
     <link href="css/creative.min.css" rel="stylesheet">
-
   </head>
 
   <body>
@@ -55,10 +44,7 @@ if (!isset($_SESSION['produtos'])){
     </section>
 
     <section id="services">
-      
-      <?php if (!$_SESSION['produtos']): ?>
         <h2>Ainda não tem produtos cadastrados</h2>
-      <?php endif ?>
     </section>
 
     <script src="vendor/jquery/jquery.min.js"></script>

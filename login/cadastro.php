@@ -5,15 +5,15 @@
   <title>Cadastro - EasyShoes</title>
   
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-	<link rel="stylesheet" type="text/css" href="csslogin/style.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
 
 </head>
 
 <body>
-	<h1 class="es">EasyShoes</h1>
-	<div class="login">
-	<h1>Cadastro: </h1>
+  <h1 class="es">EasyShoes</h1>
+  <div class="login">
+  <h1>Cadastro: </h1>
     <form method="post" action="conexao.php">
       <input type="text" name="nome" placeholder="Nome" required="required" />
       <input type="number" name="cpf" placeholder="CPF(Apenas números)" required="required" />
@@ -23,7 +23,6 @@
       <input type="password" name="senha" placeholder="Senha" required="required" />
       <input type="reset" name="apagar" placeholder="Apagar Dados" required="required" />
       <input type="submit" class="btn btn-primary btn-block btn-large" name="cadastrar">
-      <i style="color:green; font-size: 2em" class="fa fa-check"></i></a>
     </form>
 </div>
   <script  src="jslogin/index.js"></script>
