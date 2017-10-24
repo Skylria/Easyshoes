@@ -12,7 +12,8 @@
     <link href="css/creative.min.css" rel="stylesheet">
   </head>
 
-  <body id="page-top">
+  <body>
+    <div id="page-top">
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
       <div class="container">
         <a class="navbar-brand js-scroll-trigger" href="#page-top">EasyShoes</a>
@@ -179,16 +180,17 @@
               </div>
             </center>
     </section>
-
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/popper/popper.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    
     <script src="vendor/scrollreveal/scrollreveal.min.js"></script>
     <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
     <script src="js/creative.min.js"></script>
     <script src="js/filter.js"></script>
-
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/popper/popper.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+  
+    </div>
   </body>
 
 </html>
