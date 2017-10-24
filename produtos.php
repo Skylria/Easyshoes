@@ -33,75 +33,6 @@
       </div>
     </nav>
 
-    <section class="bg-primary" id="about">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 mx-auto text-center">
-            <h2 class="section-heading text-white">Nossos Produtos: </h2>
-          </div>
-        </div>
-      </div>
-    </section>
-
-     <div class="container"><br><br><br>
-    <div class="row">
-      <div class="col-md-6">
-        <div class="panel panel-primary">
-          <div class="panel-heading">
-            <h3 class="panel-title">Pesquise aqui o que deseja:</h3>
-            <div class="pull-right">
-              <span class="clickable filter" data-toggle="tooltip" title="Toggle table filter" data-container="body">
-                <i class="glyphicon glyphicon-filter"></i>
-              </span>
-            </div>
-          </div>
-          <div class="panel-body">
-            <input type="text" class="form-control" id="dev-table-filter" data-action="filter" data-filters="#dev-table" placeholder="Filtro de Produtos" />
-          </div>
-          <table class="table table-hover" id="dev-table">
-            <thead>
-              <tr>
-                <th>Marca</th>
-                <th>Número</th>
-                <th>Cor</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Sapato Adidas</td>
-                <td>42</td>
-                <td>Preto</td>
-              </tr>
-              <tr>
-                <td>Sandália Hawaianas</td>
-                <td>38</td>
-                <td>Branco</td>
-              </tr>
-              <tr>
-                <td>Bolsa Corean</td>
-                <td>10</td>
-                <td>Preto</td>
-              </tr>
-              <tr>
-                <td>Cinto de Couro</td>
-                <td>20</td>
-                <td>Bege</td>
-              </tr>
-              <tr>
-                <td>Sapato Adidas</td>
-                <td>20</td>
-                <td>Branco</td>
-              </tr>
-              <tr>
-                <td>Salto Scarpan</td>
-                <td>39</td>
-                <td>Vermelho</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/popper/popper.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
@@ -115,3 +46,6 @@
   </body>
 
 </html>
+<?php
+include'select_produtos.php';
+?>
