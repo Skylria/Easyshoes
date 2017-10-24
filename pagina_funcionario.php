@@ -52,91 +52,13 @@
         <div class="row">
           <div class="col-lg-12 text-center">
             <h2 class="section-heading">Produtos: </h2>
+            <h3> Ainda não há produtos cadastrados </h3>
             <hr class="primary">
           </div>
         </div>
       </div>
 
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6">
-        <div class="panel panel-primary">
-          <div class="panel-heading">
-            <h3 class="panel-title">Pesquise aqui o que deseja:</h3>
-            <div class="pull-right">
-              <span class="clickable filter" data-toggle="tooltip" title="Toggle table filter" data-container="body">
-                <i class="glyphicon glyphicon-filter"></i>
-              </span>
-            </div>
-          </div>
-          <div class="panel-body">
-            <input type="text" class="form-control" id="dev-table-filter" data-action="filter" data-filters="#dev-table" placeholder="Filtro de Produtos" />
-          </div>
-          <table class="table table-hover" id="dev-table">
-            <thead>
-              <tr>
-                <th>Código</th>
-                <th>Marca</th>
-                <th>Número</th>
-                <th>Setor</th>
-                <th>Quantidade</th>
-                <th>Cor</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>1</td>
-                <td>Sapato Adidas</td>
-                <td>42</td>
-                <td>320</td>
-                <td>20</td>
-                <td>Preto</td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>Sandália Hawaianas</td>
-                <td>38</td>
-                <td>322</td>
-                <td>18</td>
-                <td>Branco</td>
-              </tr>
-              <tr>
-                <td>3</td>
-                <td>Bolsa Corean</td>
-                <td>x</td>
-                <td>325</td>
-                <td>10</td>
-                <td>Preto</td>
-              </tr>
-              <tr>
-                <td>4</td>
-                <td>Cinto de Couro</td>
-                <td>x</td>
-                <td>220</td>
-                <td>20</td>
-                <td>Bege</td>
-              </tr>
-              <tr>
-                <td>5</td>
-                <td>Sapato Adidas</td>
-                <td>38</td>
-                <td>320</td>
-                <td>20</td>
-                <td>Branco</td>
-              </tr>
-              <tr>
-                <td>6</td>
-                <td>Salto Scarpan</td>
-                <td>37</td>
-                <td>322</td>
-                <td>39</td>
-                <td>Vermelho</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-
+  
     <hr class="hr2">
     <section id="contact">
       <div class="container">
