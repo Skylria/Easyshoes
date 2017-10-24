@@ -33,5 +33,5 @@
 	}
 	  
 	
-	header("location:login.php");
+		header("location:select_produtos.php");
 ?>
