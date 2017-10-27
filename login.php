@@ -14,9 +14,9 @@
 	<h1 class="es">EasyShoes</h1>
 	<div class="login">
 	<h1>Login para Funcionários</h1>
-    <form method="post" action="bd/conexao_login.php">
-    	<input type="text" name="login" placeholder="Usuario" required="required" />
-        <input type="password" name="senha" placeholder="Senha" required="required" />
+     <form method="post" action="bd/conexao_login.php">
+    	<p>Usuário: <input type="text" name="login" placeholder="Usuario" required="required" /></p>
+        <p>Senha: <input type="password" name="senha" placeholder="Senha" required="required" /></p>
         <input type="submit" class="btn btn-primary btn-block btn-large" value="Fazer Login">
 	</a></button>
     </form>
