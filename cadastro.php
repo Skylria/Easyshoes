@@ -67,7 +67,6 @@ function mostra_res(){
       Senha: <input type="password" name="senha" id="senha" onkeyup="javascript:verifica()" />
       <table id="mostra"></table>
       <input type="submit" class="btn btn-primary btn-block btn-large" name="cadastrar" value="cadastrar">
-      <table id="mostra"></table>
     </form>
 </div>
   <script  src="js/login/index.js"></script>
