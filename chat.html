@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Chat</title>
+<script src="jquery-3.2.1.min.js"></script>
+<style>
+* {
+box-sizing: border-box;
+font-size: 20px;.js
+}
+#main {
+width: 90%;
+height: 400px;
+overflow-y: scroll;
+margin: auto;
+margin-top: 50px;
+padding: 50px;
+border: 1px solid #333;
+}
+#form {
+border: 1px solid #333;
+margin-top: 10px;
+width: 90%;
+margin: auto;
+padding: 10px;
+}
+
+#form input, #form select {
+margin: 0;
+padding: 10px;
+/*border: 1px solid black;*/
+}
+#message {
+width: 90%;
+}
+#send {
+width: 10%;
+}
+#color {
+width: 100%
+}
+</style>
+</head>
+<body>
+
+<div id="main"></div>
+<form id="form" action="#">
+<input type="text" id="message" name="message" placeholder="Digite sua mensagem"><input type="submit" id="send" value="ok">
+<select name="color" id="color">
+<option value="" readonly>Escolha a cor do texto</option>
+<option value=""--></option>
+<option value="black">Black</option>
+<option value="red" style="color: red">Red</option>
+<option value="green" style="color: green">Green</option>
+<option value="blue" style="color: blue">Blue</option>
+<option value="purple" style="color: purple">Purple</option>
+<option value="orange" style="color: orange">Orange</option>
+</select>
+</form>
+<script>
+$(document).ready(function() { // isto garante que essa função só será executada quando o DOM estiver pronto
+$('#color').on('change', function(evt) {
+var color = $(this).val();
+$(this).css('color', color);
+$('#message').css('color', color);
+});
+
+var last = 0;
+
+$('#form').on('submit', function(evt) {
+evt.preventDefault();
+$.post(
+'sendMessage.php',
+$(this).serialize(),
+function(data) {
+// processAjax(data);
+}
+);
+$('#message').val('');
+});
+
+
+setInterval(function() {
+$.get('getMessages.php?last=' + last, function(data) {
+processAjax(data);
+});
+}, 1000);
+
+function processAjax(data) {
+var data = JSON.parse(data);
+last = data.lastTime;
+addMessages(data.messages);
+}
+
+function addMessages(messages) {
+var main = $('#main');
+// main.html('');
+for (i in messages) {
+var message = messages[i];
+if (message.time) {
+// console.log(message.time);
+var d = new Date(message.time);
+var el =
+'<p>' +
+'<span class="time">' + d.getHours() + ':' + d.getMinutes() + ':' + d.getSeconds() + '</span> - ' +
+'<span style="color: ' + message.color + ';" class="text">' + message.text + '</span>' +
+'</p>';
+main.html(main.html() + el);
+main.scrollTop(main.height());
+}
+}
+}
+});
+</script>
+</body>
+</html>
