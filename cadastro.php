@@ -39,10 +39,10 @@ function verifica(){
 		forca += 25;
 	}
 	if(senha.match(/[a-z]+/)){
-		forca += 5;
+		forca += 30;
 	}
 	if(senha.match(/[A-Z]+/)){
-		forca += 10;
+		forca += 30;
 	}
 	if(senha.match(/d+/)){
 		forca += 20;
@@ -53,11 +53,14 @@ function verifica(){
 	return mostra_res();
 }
 function mostra_res(){
+    if (forca == 0){
+       mostra.innerHTML = '<p>Senha Fraca </p>';
+    }
 	if(forca < 30){
 		mostra.innerHTML = '<p>Senha Fraca </p>';
-	}else if((forca >= 30) && (forca < 60)){
-		mostra.innerHTML = '<p>Senha Justa </p>';;
-	}else if((forca >= 60) && (forca < 85)){
+	}else if((forca >= 45) && (forca < 80)){
+		mostra.innerHTML = '<p>Senha Justa </p>';
+	}else if(forca >= 80){
 		mostra.innerHTML = '<p>Forte </p>';
 	}
 }
