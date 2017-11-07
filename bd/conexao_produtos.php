@@ -14,9 +14,10 @@
 	$numero = $_POST["numero"];
 	$setor = $_POST["setor"];
 	$quantidade = $_POST["quantidade"];
+	$preco = $_POST["preco"];
 
-  $sql ="INSERT INTO Cadastro_produtos(cor, marca, numero, setor, quantidade)
-  VALUES (:cor, :marca, :numero, :setor, :quantidade)";
+  $sql ="INSERT INTO Cadastro_produtos(cor, marca, numero, setor, quantidade, preco)
+  VALUES (:cor, :marca, :numero, :setor, :quantidade, :preco)";
 
 	$stmt = $conn->prepare( $sql );
 	$stmt->bindParam( ':cor', $cor);
@@ -24,6 +25,7 @@
 	$stmt->bindParam( ':numero', $numero);
 	$stmt->bindParam( ':setor', $setor);
 	$stmt->bindParam( ':quantidade', $quantidade);
+	$stmt->bindParam( ':preco', $preco);
 
 	$result = $stmt->execute();
 
@@ -33,5 +35,5 @@
 	}
 	  
 	
-	header("location: ../select_produtos.php");
+	header("location: ../pagina_funcionario.php");
 ?>
