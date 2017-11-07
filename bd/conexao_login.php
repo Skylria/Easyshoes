@@ -1,4 +1,7 @@
 <?php
+session_start();
+$_SESSION['usuario']="";
+$_SESSION['logado']=false;
 $host = "localhost";
 $dbname = "id3284881_cadastro";
 $usuario="id3284881_ifpe";
@@ -30,7 +33,8 @@ $row = mysqli_num_rows($sql);
 if($row > 0){
 	$_SESSION['login'] = $login;
 	$_SESSION['senha'] = $senha;
-	$_SESSION['logado'] = True;
+	$_SESSION['logado'] = true;
+	$_SESSION['usuario']=$login;
 	echo "<script>ltrue()</script>";
 
 }
