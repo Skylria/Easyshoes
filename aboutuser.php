@@ -54,27 +54,17 @@ if (!isset($_SESSION['logado'])){
                  
             <li class="nav-item">
                   <a class="nav-link js-scroll-trigger" href="unlog.php"><i class="fa fa-2x fa-power-off sr-icons" title="Deslogar"></i></a></li>
-            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="adm.php"><i class="fa fa-2x fa-gear sr-icons" title="Administração"></i></a></li>
               <?php endif ?>
               <?php if ( $_SESSION['logado'] == false ): ?>
               <li class="nav-item"><a class="nav-link js-scroll-trigger" href="login.php">Login</a>
               <?php endif ?>
             </li>
+            
+            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="adm.php"><i class="fa fa-2x fa-gear sr-icons" title="Administração"></i></a></li>
           </ul>
         </div>
       </div>
     </nav>
-  
-<section class="bg-primary" id="about">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 mx-auto text-center">
-            <h2 class="section-heading text-white">Funcionário(a) <?= $_SESSION['usuario']?></h2>
-           </div>
-        </div>
-      </div>
-</section>
-<h1 class="hidden-xs">Dados:</h1>
 <?php
 $host = "localhost";
 $usuario = "id3284881_ifpe";
@@ -84,7 +74,7 @@ $bd = "id3284881_cadastro";
 $strcon = mysqli_connect("$host","$usuario","$senha","$bd") or die('Erro ao conectar ao banco!');
 $sql = "SELECT * FROM cadastro";
 $resultado = mysqli_query($strcon, $sql) or die('Erro ao tentar cadastrar registro');
-$name = mysqli_query($strcon, "SELECT U_NOME, U_CPF, U_TELEFONE, U_EMAIL, U_LOGIN, U_SENHA FROM cadastro WHERE U_LOGIN = '$l'") or die(mysqli_error($strcon));
+$name = mysqli_query($strcon, "SELECT U_NOME, U_CPF, U_TELEFONE, U_EMAIL, U_LOGIN, U_SENHA, U_Foto FROM cadastro WHERE U_LOGIN = '$l'") or die(mysqli_error($strcon));
 $re = mysqli_fetch_array($name);
 
 $nome = $re['U_NOME'];
@@ -93,34 +83,36 @@ $telefone = $re['U_TELEFONE'];
 $email = $re['U_EMAIL'];
 $login = $re['U_LOGIN'];
 $s = $re['U_SENHA'];
-?>
-<br>
-<?php
+$foto = $re['U_Foto'];
  
-	$dbname = "id3284881_cadastro";
-	$usuario="id3284881_ifpe";
-	$senha = "123456";
-	try {
-	  	$conn = new PDO("mysql:host=localhost;dbname=$dbname", $usuario, $senha);
-	    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-	} catch(PDOException $e) {
-	    echo 'ERROR: ' . $e->getMessage();
-	}
-	?>
-
+$dbname = "id3284881_cadastro";
+try {
+  	$conn = new PDO("mysql:host=localhost;dbname=$dbname", $usuario, $senha);
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch(PDOException $e) {
+    echo 'ERROR: ' . $e->getMessage();
+}
+?>
+<section class="bg-primary" id="about">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto text-center">
+            <h2 class="section-heading text-white">Funcionário(a) <?= $_SESSION['usuario']?></h2>
+            <img src="uploads/<?=$foto?>" class="img-circle" width="250px">
+           </div>
+        </div>
+      </div>
+</section>
 
 	<link rel="stylesheet" type="text/css" href="css/cadastro_produtos1.css">
-
-
 	
     	<p id="profile-name" class="profile-name-card"></p>
 	<form name="frm-jcrop" id="frm-jcrop" action="aboutuser2.php" method="POST" enctype="multipart/form-data">
 
 		<br>
 		
-		Insira sua foto : <input type="file" name="imagem">
-		<br>
-		<br><button  type="submit">ENVIAR</button>
+		Trocar Foto de Perfil: <input type="file" name="imagem">
+		<button  type="submit"><i class="fa fa-2x fa-upload sr-icons" title="Upload"></i></button>
 
 	</form>
 	<br>
