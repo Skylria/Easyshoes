@@ -4,6 +4,9 @@ if (!isset($_SESSION['logado'])){
     $_SESSION['logado'] = false;
     $_SESSION['usuario']= "";
 }
+if (!isset($_SESSION['adm'])){
+    $_SESSION['adm'] = false;
+}
 if ($_SESSION['logado'] == false){
     header("location:login.php");
 }
@@ -14,12 +17,7 @@ if ($_SESSION['logado'] == false){
   <head>
     <meta charset="utf-8">
     <title>EasyShoes</title>
-    <link href="css/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href='https://fonts.googleapis.com/   css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
-    <link href="css/vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
-    <link href="css/creative.min.css" rel="stylesheet">
+    <?php include ('css/plugsbootstrap.html'); ?>
     <style> #contact {background-color: white !important; color:black !important} </style>
   </head>
   <body id="page-top">
@@ -47,6 +45,9 @@ if ($_SESSION['logado'] == false){
               <a class="nav-link js-scroll-trigger" href="user.php">USUÁRIOS</a>
             </li>
             <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="equipe.php">EQUIPE</a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="pagina_funcionario.php">PÁGINA DO FUNCIONÁRIO</a></li>
               <?php if ( $_SESSION['logado'] == true ): ?>
             <li class="nav-item">
@@ -54,13 +55,14 @@ if ($_SESSION['logado'] == false){
                  
             <li class="nav-item">
                   <a class="nav-link js-scroll-trigger" href="unlog.php"><i class="fa fa-2x fa-power-off sr-icons" title="Deslogar"></i></a></li>
-            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="compras.php"><i class="fa fa-2x fa-shopping-cart sr-icons" title="Carrinho do Cliente"></i></a></li>
               <?php endif ?>
               <?php if ( $_SESSION['logado'] == false ): ?>
               <li class="nav-item"><a class="nav-link js-scroll-trigger" href="contact.php">Contato</a>
               <li class="nav-item"><a class="nav-link js-scroll-trigger" href="login.php">Login</a>
               <?php endif ?>
             </li>
+            
+            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="adm.php"><i class="fa fa-2x fa-gear sr-icons" title="Administração"></i></a></li>
           </ul>
         </div>
       </div>
@@ -99,7 +101,4 @@ if ($_SESSION['logado'] == false){
     <script src="css/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
     <script src="js/creative.min.js"></script>
     <script src="js/filter.js"></script>
-
-  </body>
-
-</html>
+  <?php include'footer.php';?>

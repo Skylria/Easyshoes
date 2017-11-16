@@ -1,5 +1,4 @@
-<?php include 'header.php'; ?>
-
+<?php include'header.php';?>
     <section class="bg-primary" id="about">
       <div class="container">
         <div class="row">
@@ -19,8 +18,9 @@
     <script src="js/filter.js"></script>
     
 
-  </body>
-
-</html>
+<br><br>
 <?php include 'produtos_publicos.php';
  ?>
+ <br><br>
+ <?php include'footer.php';
+?>

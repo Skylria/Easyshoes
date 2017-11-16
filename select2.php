@@ -1,46 +1,46 @@
 <!DOCTYPE html>
 <html>
     <head>
-    	<link rel="stylesheet" type="text/css" href="css/produtos.css">
+        <link rel="stylesheet" type="text/css" href="css/produtos.css">
     </head>
     <body>
+        
+          <table class="quadrado">
+            <tr>
+                
+                <th>   </th>
+                <th>Nome</th>
+                <th>Telefone</th>
+                <th>Email</th>
+            </tr>
         <?php
-        echo "<table style='border: solid 1px black;'>";
-         echo "<tr><th>Nome</th><th>Cpf</th><th>Telefone</th><th>Email</th><th>Login</th></tr>";
-        class TableRows extends RecursiveIteratorIterator { 
-            function __construct($it) { 
-                parent::__construct($it, self::LEAVES_ONLY); 
-            }
-            function current() {
-                return "<td style='width: 150px; border: 1px solid black;'>" . parent::current(). "</td>";
-            }
-            function beginChildren() { 
-                echo "<tr>"; 
-            } 
-            function endChildren() { 
-                echo "</tr>" . "\n";
-            } 
-        } 
-        $servername = "localhost";
-        $dbname   = "id3284881_cadastro";
-        $username= "id3284881_ifpe";
-        $password  = "123456";
-        try {
-            $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
-            $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            $stmt = $conn->prepare("SELECT U_NOME,U_CPF,U_TELEFONE,U_EMAIL,U_LOGIN FROM cadastro"); 
-            $stmt->execute();
-            // set the resulting array to associative
-            $result = $stmt->setFetchMode(PDO::FETCH_ASSOC); 
-            foreach(new TableRows(new RecursiveArrayIterator($stmt->fetchAll())) as $k=>$v) { 
-                echo $v;
-            }
-        }
-        catch(PDOException $e) {
-            echo "Error: " . $e->getMessage();
-        }
-        $conn = null;
-        echo "</table>";
+        $host = "localhost";
+        $usuario = "id3284881_ifpe";
+        $senha = "123456";
+        $bd = "id3284881_cadastro";
+        $strcon = mysqli_connect("$host","$usuario","$senha","$bd") or die('Erro ao conectar ao banco!');
+        $sql = "SELECT * FROM cadastro";
+        $resultado = mysqli_query($strcon, $sql) or die('Erro ao tentar cadastrar registro');
+        $name = mysqli_query($strcon, "SELECT U_NOME,U_TELEFONE,U_EMAIL, U_Foto FROM cadastro") or die(mysqli_error($strcon));
+        while($dados = mysqli_fetch_array($resultado)): ?>
+        
+        <?php
+        $nome = $dados['U_NOME'];
+        $telefone = $dados['U_TELEFONE'];
+        $email = $dados['U_EMAIL'];
+        $foto = $dados['U_Foto'];
+        echo "<tr>
+                
+                <td><img src='uploads/".$foto."' width='200px'></td>
+                <td>".$nome."</td>
+                <td>"."$telefone"."</td>
+                <td>"."$email"."</td>
+                
+            </tr>";
+        ?>
+        <?php
+        endwhile;
+        mysqli_close($strcon);
         ?>
     </body>
 </html>

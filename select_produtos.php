@@ -1,19 +1,24 @@
 <!DOCTYPE html>
 <html>
     <head>
-    	<link rel="stylesheet" type="text/css" href="css/produtos.css">
-    	<title>Meus Produtos</title>
+        <link rel="stylesheet" type="text/css" href="css/produtos.css">
+        <title>Meus Produtos</title>
     </head>
     <body>
+        <form method="POST" action="busca.php">
+          <input type="text" name="busca" size="20">
+          <input type="submit" value="Buscar" name="ok">
+        </form>
         <table class="quadrado">
             <tr>
+                
                 <th>Marca </th>
                 <th>Cor </th>
                 <th>Número </th>
                 <th>Preço </th>
                 <th>Setor</th>
                 <th>Quantidade Disp.</th>
-                <th>Deletar Produto </th>
+                <th>Venda - Produto </th>
             </tr>
         <?php
         $host = "localhost";
@@ -36,13 +41,15 @@
         $quantidade = $dados['quantidade'];
         $preco = $dados['preco'];
         echo "<tr>
+                
                 <td>".$marca."</td>
                 <td>"."$cor"."</td>
                 <td>"."$numero"."</td>
                 <td>R$ "."$preco"."</td>
                 <td>".$setor."</td>
                 <td>"."$quantidade"."</td>
-                <td><a href='deletarproduto.php?id=".$codigo."'><i class='fa fa-2x fa-trash sr-icons' title='Deletar Produto'></i></a></td>
+                <td><a href='bd/venda.php?id=".$codigo."'><i class='fa fa-2x fa-shopping-cart sr-icons' title='Vender Produto'></i></a></td>
+                
             </tr>";
         ?>
         <?php

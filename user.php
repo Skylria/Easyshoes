@@ -54,7 +54,7 @@ if ($_SESSION['logado'] == false){
                  
             <li class="nav-item">
                   <a class="nav-link js-scroll-trigger" href="unlog.php"><i class="fa fa-2x fa-power-off sr-icons" title="Deslogar"></i></a></li>
-            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="compras.php"><i class="fa fa-2x fa-shopping-cart sr-icons" title="Carrinho do Cliente"></i></a></li>
+            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="adm.php"><i class="fa fa-2x fa-gear sr-icons" title="Carrinho do Cliente"></i></a></li>
               <?php endif ?>
               <?php if ( $_SESSION['logado'] == false ): ?>
               <li class="nav-item"><a class="nav-link js-scroll-trigger" href="contact.php">Contato</a>
@@ -87,8 +87,7 @@ if ($_SESSION['logado'] == false){
     <script src="js/filter.js"></script>
     
 
-  </body>
 
-</html>
 <?php include'select2.php';
  ?>
+
