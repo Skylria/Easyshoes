@@ -1,31 +1,45 @@
+<?php include "header.php"; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Chat</title>
-<script src="js/jquery-3.2.1.min.js"></script>
+
+        <section class="bg-primary" id="about">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8 mx-auto text-center">
+                <h2 class="section-heading text-white">FALE CONOSCO </h2>
+              </div>
+            </div>
+          </div>
+        </section>
+<script src="jquery-3.2.1.min.js"></script>
+ 
 <style>
 * {
 box-sizing: border-box;
-font-size: 20px;.js
+font-size: 20px;
 }
 #main {
-width: 90%;
-height: 400px;
+width: 50%;
+height: 50%;
 overflow-y: scroll;
 margin: auto;
 margin-top: 50px;
-padding: 50px;
-border: 1px solid #333;
+padding: 5em;
+border: 1em solid orange;
 }
 #form {
-border: 1px solid #333;
+border: 10px solid orange;
 margin-top: 10px;
-width: 90%;
+width: 50%;
 margin: auto;
 padding: 10px;
-}
 
+}
+h9{
+    color:white;
+}
 #form input, #form select {
 margin: 0;
 padding: 10px;
@@ -41,6 +55,15 @@ width: 10%;
 width: 100%
 }
 </style>
+ <link href="css/vendor/bootstrap.css" rel="stylesheet">
+    <link href="css/vendor/style.css" rel="stylesheet">
+    <link href="css/vendor/font-awesome.min.css" rel="stylesheet">
+    <link href="css/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/   css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    <link href="css/vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+    <link href="css/creative.min.css" rel="stylesheet">
 </head>
 <body>
 
@@ -113,5 +136,5 @@ main.scrollTop(main.height());
 }
 });
 </script>
-</body>
-</html>
+
+<?php include'footer.php'?>
