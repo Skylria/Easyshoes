@@ -1,4 +1,4 @@
-<?php include'header.php'?>
+<?php include'header.php';?>
     <section class="bg-primary" id="about">
       <div class="container">
         <div class="row">
@@ -33,17 +33,17 @@
                     	</div>
 					</div>	
 				</div>
-				<h4>Jeislania Oliveira</h4></h4>
+				<h4>Jeslânia Alves</h4></h4>
 				<h5 class="ctitle">Programadora</h5>
 				<div class="hline"></div>
 		 	</div>
-		 	<div class="row centered">
+		 		 	<div class="row centered">
 		 	<div class="col-lg-3 col-md-3 col-sm-3">
 				<div class="he-wrap tpl6">
-				<img src="img/mili.jpg" alt="">
+				<img src="img/mi.jpg" alt="">
 					<div class="he-view">
 						<div class="bg a0" data-animate="fadeIn">
-                    	</div>
+                    	</div>	
 					</div>	
 				</div>
 				<h4>Milena Lins </h4></h4>
@@ -68,6 +68,3 @@
  <?php include 'footer.php';?>
 
 
-
-
-     

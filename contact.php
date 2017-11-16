@@ -10,7 +10,7 @@
           </div>
         </section>
     
-    	<div class="container mtb">
+      <div class="container mtb">
             <h4>Enviar Feedback</h4>
                <form role="form" action="bd/comment.php">
                     <label for="InputName1">Nome*</label>
@@ -21,6 +21,6 @@
                     <textarea class="form-control" id="message1" rows="4"></textarea>
                     <button type="submit" class="btn btn-theme">Enviar</button>
                 </form>
-    	</div>
+      </div>
     </body>
 </html>
