@@ -76,3 +76,4 @@ if (!isset($_SESSION['logado'])){
   <script  src="js/login/index.js"></script>
 </body>
 </html>
+<?php include'chat.php'?>
