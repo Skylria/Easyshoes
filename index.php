@@ -33,9 +33,7 @@ if (!isset($_SESSION['logado'])){
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#services">SERVIÇOS</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="chat.php">CONTATO</a>
-            </li>
+            
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="produtos.php">NOSSOS PRODUTOS</a>
             </li>
@@ -191,3 +189,4 @@ if (!isset($_SESSION['logado'])){
 
 </html>
 <?php include'footer.php'?>
+<?php include'chat.php'?>
