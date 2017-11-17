@@ -33,7 +33,7 @@
                     	</div>
 					</div>	
 				</div>
-				<h4>Jeslânia Alves</h4></h4>
+				<h4>Jeislania de Oliveira</h4></h4>
 				<h5 class="ctitle">Programadora</h5>
 				<div class="hline"></div>
 		 	</div>
