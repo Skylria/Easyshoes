@@ -66,5 +66,5 @@
    
 
  <?php include 'footer.php';?>
-
+<?php include'chat.php'?>
 
