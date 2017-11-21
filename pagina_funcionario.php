@@ -101,4 +101,5 @@ if ($_SESSION['logado'] == false){
     <script src="css/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
     <script src="js/creative.min.js"></script>
     <script src="js/filter.js"></script>
+  <?php include'mensagem.php';?>   
   <?php include'footer.php';?>
