@@ -29,13 +29,13 @@
                   <a class="nav-link js-scroll-trigger" href="aboutuser.php"?><i class="fa fa-2x fa-user-circle-o sr-icons" title="Deslogar"></i> USUÁRIO:  <?=$_SESSION['usuario']?></a></li>
                  
             <li class="nav-item">
-                  <a class="nav-link js-scroll-trigger" href="unlog.php"><i class="fa fa-2x fa-power-off sr-icons" title="Deslogar"></i></a></li>
-            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="adm.php"><i class="fa fa-2x fa-gear sr-icons" title="Carrinho do Cliente"></i></a></li>
+                  <a class="nav-link js-scroll-trigger" href="unlog.php"><i class="fa fa-2x fa-power-off sr-icons" title="Deslogar"></i></a>
+            </li>
               <?php endif ?>
               <?php if ( $_SESSION['logado'] == false ): ?>
-              <li class="nav-item"><a class="nav-link js-scroll-trigger" href="login.php">LOGIN</a>
-              <?php endif ?>
+            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="login.php">LOGIN</a>
             </li>
+              <?php endif ?>
             
             <li class="nav-item"><a class="nav-link js-scroll-trigger" href="adm.php"><i class="fa fa-2x fa-gear sr-icons" title="Administração"></i></a></li>
           </ul>

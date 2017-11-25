@@ -12,7 +12,7 @@
 <!--<div class="container" id="container">-->
 <!--    <div class="row">-->
 <!--        <div class="well">-->
-<table class="quadrado">
+<table class="table table-striped table-dark">
     <tr>
         <th>Marca </th>
         <th>Cor </th>
@@ -21,13 +21,13 @@
     </tr>
 <?php
 $host = "localhost";
-$usuario = "id3284881_ifpe";
-$senha = "123456";
+$usuario = "root";
+$senha = "";
 $bd = "id3284881_cadastro";
 $strcon = mysqli_connect("$host","$usuario","$senha","$bd") or die('Erro ao conectar ao banco!');
 $sql = "SELECT * FROM Cadastro_produtos";
 $resultado = mysqli_query($strcon, $sql) or die('Erro ao tentar cadastrar registro');
-$name = mysqli_query($strcon, "SELECT cor, marca, numero, preco FROM Cadastro_produtos") or die(mysqli_error($strcon));
+$name = mysqli_query($strcon, "SELECT  marca, cor, numero, preco FROM Cadastro_produtos") or die(mysqli_error($strcon));
 $re = mysqli_fetch_array($name);
 while($dados = mysqli_fetch_array($resultado)):
 ?>

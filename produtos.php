@@ -17,7 +17,7 @@
   </head>
 
   <body id="page-top">
-    <?php include 'exts/pagetopindex.php';?>
+    <?php include 'exts/pagetop.php';?>
 
     <?php include 'exts/javascripts.php';?>
 <section class="bg-primary" id="about">
@@ -31,8 +31,7 @@
       </div>
     </section>
 <?php
-include'select_produtos.php';
-?>
+include 'produtos_publicos.php';include 'exts/javascripts.php'; include 'footer.php'; ?>
 
   </body>
 
