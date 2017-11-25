@@ -4,8 +4,8 @@ $_SESSION['usuario']="";
 $_SESSION['logado']=false;
 $host = "localhost";
 $dbname = "id3284881_cadastro";
-$usuario="id3284881_ifpe";
-$senha = "123456";
+$usuario="root";
+$senha = "";
 $conexao = mysqli_connect($host, $usuario, $senha) or die(mysqli_error());
 mysqli_select_db($conexao, $dbname) or die(mysqli_error());
 ?>
@@ -26,7 +26,7 @@ mysqli_select_db($conexao, $dbname) or die(mysqli_error());
 <body>
 
 <?php  
-$login = $_POST['login'];
+$login = $_POST['usuario'];
 $senha = $_POST['senha'];
 $sql = mysqli_query($conexao,"SELECT * FROM cadastro WHERE U_LOGIN = '$login' and U_SENHA = '$senha'") or die(mysql_error('Login ou senha errados'));
 $row = mysqli_num_rows($sql);

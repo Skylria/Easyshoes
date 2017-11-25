@@ -1,80 +1,47 @@
-<?php
-session_start();
-if (!isset($_SESSION['logado'])){
-    $_SESSION['logado'] = false;
-    $_SESSION['usuario']= "";
-}
-if (!isset($_SESSION['adm'])){
-    $_SESSION['adm'] = false;
-}
-if ($_SESSION['logado'] == false){
-    header("location:login.php");
-}
-?>
 <!DOCTYPE html>
 <html lang="en">
 
   <head>
     <meta charset="utf-8">
     <title>EasyShoes</title>
-    <?php include ('css/plugsbootstrap.html'); ?>
-    <style> #contact {background-color: white !important; color:black !important} </style>
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/   css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+    <link href="css/creative.min.css" rel="stylesheet">
   </head>
-  <body id="page-top">
+
+  <body>
+    <div id="page-top">
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
       <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="index.php">EasyShoes</a>
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">EasyShoes</a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="index.php">SOBRE</a>
+              <a class="nav-link js-scroll-trigger" href="#services">Produtos</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="index.php">SERVIÇOS</a>
+              <a class="nav-link js-scroll-trigger" href="#contact">Sobre Nós</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="index.php">CONTATO</a>
+              <a class="nav-link js-scroll-trigger" href="login/login.php">Fazer Login</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="produtos.php">NOSSOS PRODUTOS</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="user.php">USUÁRIOS</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="equipe.php">EQUIPE</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="pagina_funcionario.php">PÁGINA DO FUNCIONÁRIO</a></li>
-              <?php if ( $_SESSION['logado'] == true ): ?>
-            <li class="nav-item">
-                  <a class="nav-link js-scroll-trigger" href="aboutuser.php"?><i class="fa fa-2x fa-user-circle-o sr-icons" title="Deslogar"></i> USUÁRIO:  <?=$_SESSION['usuario']?></a></li>
-                 
-            <li class="nav-item">
-                  <a class="nav-link js-scroll-trigger" href="unlog.php"><i class="fa fa-2x fa-power-off sr-icons" title="Deslogar"></i></a></li>
-              <?php endif ?>
-              <?php if ( $_SESSION['logado'] == false ): ?>
-              <li class="nav-item"><a class="nav-link js-scroll-trigger" href="contact.php">Contato</a>
-              <li class="nav-item"><a class="nav-link js-scroll-trigger" href="login.php">Login</a>
-              <?php endif ?>
-            </li>
-            
-            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="adm.php"><i class="fa fa-2x fa-gear sr-icons" title="Administração"></i></a></li>
           </ul>
         </div>
       </div>
     </nav>
-
     <section class="bg-primary" id="about">
       <div class="container">
         <div class="row">
           <div class="col-lg-8 mx-auto text-center">
-            <h2 class="section-heading text-white">Bem vindo(a), <?= $_SESSION['usuario']?>!</h2>
+            <h2 class="section-heading text-white">Bem vindo(a), (funcionário)!</h2>
             <p class="text-faded"> Este espaço é onde você, funcionário(a), terá acesso ao estoque dos produtos, assim como o setor onde ele se encontra, a quantidade disponível, marca, cor e muito mais.</p>
-            <h3 class="section-heading text-white">Mais agilidade no seu atendimento. Aproveite!</h3><br>
+            <h3 class="section-heading text-white">Tudo bem mais fácil para você!</h3><br>
           </div>
         </div>
       </div>
@@ -85,21 +52,67 @@ if ($_SESSION['logado'] == false){
         <div class="row">
           <div class="col-lg-12 text-center">
             <h2 class="section-heading">Produtos: </h2>
-            <a type="button" class="btn-primary btn-lg" href="cadastro_sapato.php">Cadastrar Novo Produto</a><br>
-            <?php include 'select_produtos.php'; ?>
+            <h3> Ainda não há produtos cadastrados </h3>
+            <hr class="primary">
           </div>
         </div>
       </div>
 
+  
+    <hr class="hr2">
+    <section id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto text-center">
+            <h2 class="section-heading">Sobre Nós: </h2>
+            <hr class="primary">
+            <p>Projeto desenvolvido pelo 2º Período do Curso Informática para Internet - IPI, cadeira Projeto e Prática 1, do Professor e Orientador Alexandre Vianna. Alexandrevianna.net</p>
+            <p>Desenvolvedoras:</p>
+            <p>Bruna Rafaella De Oliveira Neves - IFPE CAMPUS IGARASSU <br> brunarafaellaneves@gmail.com </p>
+            <p>Milena Lins Basílio - IFPE CAMPUS IGARASSU <br>  milennab7@gmail.com </p>
+            <p>Jeislânia Oliveira da Silva - IFPE CAMPUS IGARASSU <br> laine.jos@gmail.com </p>
+          </div>
+        </div>
+        
+          <div class="mr-auto text-center">
+            <i class="fa fa-folder-open fa-5x sr-contact"></i>
+            <p>
+              <a href="https://github.com/Skylria/Easyshoes">Visite nosso Repositório no GitHub</a>
+            </p>
+          </div>
+        </div>
+      </div>
+            <center>
+              <div>
+                <h3 class="section-heading">Fique conectado!</h3>
+                <a href="https://www.facebook.com/">
+                  <i class="fa fa-4x fa-facebook-official" aria-hidden="true"></i>
+                </a>&nbsp;&nbsp;&nbsp;
+                <a href="https://web.whatsapp.com/">
+                  <i class="fa fa-4x fa-whatsapp" aria-hidden="true"></i>
+                </a>&nbsp;&nbsp;&nbsp;
+                <a href="https://twitter.com/login?lang=pt">
+                  <i class="fa fa-4x fa-twitter" aria-hidden="true"></i>
+                </a>&nbsp;&nbsp;&nbsp;
+                <a href="https://www.google.com/gmail/">
+                  <i class="fa fa-4x fa-google-plus-official" aria-hidden="true"></i>
+                </a><br>
+                <p></p>
+                Ou ligue para (+55)813564-1897
+              </div>
+            </center>
     </section>
-
-    <script src="css/vendor/jquery/jquery.min.js"></script>
-    <script src="css/vendor/popper/popper.min.js"></script>
-    <script src="css/vendor/bootstrap/js/bootstrap.min.js"></script>
-    <script src="css/vendor/jquery-easing/jquery.easing.min.js"></script>
-    <script src="css/vendor/scrollreveal/scrollreveal.min.js"></script>
-    <script src="css/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+    
+    <script src="vendor/scrollreveal/scrollreveal.min.js"></script>
+    <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
     <script src="js/creative.min.js"></script>
     <script src="js/filter.js"></script>
-  <?php include'mensagem.php';?>   
-  <?php include'footer.php';?>
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/popper/popper.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+  
+    </div>
+  </body>
+
+</html>

@@ -1,0 +1,11 @@
+body{
+	background-image:url(cinza.jpg);
+}
+
+h1{
+	color:#C71585 ;
+	font-style:Courier , monospace;
+}
+p{
+	font-size: 1.5em;
+}
