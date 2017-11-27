@@ -1,10 +1,12 @@
 <?php
+session_start();
 $senha = $_POST['senha'];
-if ($senha == "mestre4dmin") {
-	header('location: pageadm.php');
+$_SESSION['adm'] = false;
+$confere = 123;
+if ($senha == "123") {
+	$_SESSION['adm'] = true;
 }
-else {
-	header('location:../adm.php');
-}
+
+header('location:../pageadm.php');
 
 ?>

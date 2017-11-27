@@ -3,10 +3,6 @@ session_start();
 if($_SESSION['adm'] == false){
     header('location:adm.php');
 }
-if (!isset($_SESSION['logado'])){
-    $_SESSION['logado'] = false;
-    $_SESSION['usuario']= "";
-}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -14,57 +10,11 @@ if (!isset($_SESSION['logado'])){
   <head>
     <meta charset="utf-8">
     <title>EasyShoes</title>
-    <?php include ('css/plugsbootstrap.html'); ?>
+    <?php include ('exts/csshrefs.php'); ?>
     <style> #contact {background-color: white !important; color:black !important} </style>
   </head>
   <body id="page-top">
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-      <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="index.php">EasyShoes</a>
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="index.php">SOBRE</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="index.php">SERVIÇOS</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="index.php">CONTATO</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="produtos.php">NOSSOS PRODUTOS</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="user.php">USUÁRIOS</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="pagina_funcionario.php">PÁGINA DO FUNCIONÁRIO</a></li>
-              <?php if ( $_SESSION['logado'] == true ): ?>
-            <li class="nav-item">
-                  <a class="nav-link js-scroll-trigger" href="aboutuser.php"?><i class="fa fa-2x fa-user-circle-o sr-icons" title="Deslogar"></i> USUÁRIO:  <?=$_SESSION['usuario']?></a></li>
-                 
-            <li class="nav-item">
-                  <a class="nav-link js-scroll-trigger" href="unlog.php"><i class="fa fa-2x fa-power-off sr-icons" title="Deslogar"></i></a></li>
-              <?php endif ?>
-              <?php if ( $_SESSION['logado'] == false ): ?>
-              <li class="nav-item"><a class="nav-link js-scroll-trigger" href="contact.php">Contato</a>
-              <li class="nav-item"><a class="nav-link js-scroll-trigger" href="login.php">Login</a>
-              <?php endif ?>
-            </li>
-            
-            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="adm.php"><i class="fa fa-2x fa-gear sr-icons" title="Administração"></i></a></li>
-            <?php if ($_SESSION['adm'] == true):?>
-                <li class="nav-item">
-                  <a class="nav-link js-scroll-trigger" href="unlogadm.php"><i class="fa fa-2x fa-power-off sr-icons" title="Deslogar"></i></a></li>
-            <?php endif ?>
-          </ul>
-        </div>
-      </div>
-    </nav>
+    <?php include 'exts/pagetop.php';?>
 
     <section class="bg-primary" id="about">
       <div class="container">
@@ -89,7 +39,7 @@ if (!isset($_SESSION['logado'])){
 
     </section>
 
-    	<link rel="stylesheet" type="text/css" href="css/produtos.css">
+      <link rel="stylesheet" type="text/css" href="css/produtos.css">
         <table class="quadrado">
             <tr>
                 
@@ -105,8 +55,8 @@ if (!isset($_SESSION['logado'])){
             </tr>
         <?php
         $host = "localhost";
-        $usuario = "id3284881_ifpe";
-        $senha = "123456";
+        $usuario = "root";
+        $senha = "";
         $bd = "id3284881_cadastro";
         $strcon = mysqli_connect("$host","$usuario","$senha","$bd") or die('Erro ao conectar ao banco!');
         $sql = "SELECT * FROM Vendas";
@@ -149,19 +99,4 @@ if (!isset($_SESSION['logado'])){
 </html>
 
 
-
-
-
-
-
-
-
-    <script src="css/vendor/jquery/jquery.min.js"></script>
-    <script src="css/vendor/popper/popper.min.js"></script>
-    <script src="css/vendor/bootstrap/js/bootstrap.min.js"></script>
-    <script src="css/vendor/jquery-easing/jquery.easing.min.js"></script>
-    <script src="css/vendor/scrollreveal/scrollreveal.min.js"></script>
-    <script src="css/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
-    <script src="js/creative.min.js"></script>
-    <script src="js/filter.js"></script>
-  <?php include'footer.php';?>
+  <?php include 'exts/javascripts.php'; include'footer.php';?>
