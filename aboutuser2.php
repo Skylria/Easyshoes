@@ -1,19 +1,7 @@
 <?php
 session_start();
-if (!isset($_SESSION['logado'])){
-    $_SESSION['logado'] = false;
-    $_SESSION['usuario']= "";
-}
-$host = 'localhost';
-	$dbname = "id3284881_cadastro";
-	$usuario="id3284881_ifpe";
-	$senha = "123456";
-	try {
-	  	$conn = new PDO("mysql:host=localhost;dbname=$dbname", $usuario, $senha);
-	    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-	} catch(PDOException $e) {
-	    echo 'ERROR: ' . $e->getMessage();
-	}
+include 'exts/testalogado.php';
+include 'bd/conexaogeral.php';
 			// memory limit (nem todo server aceita)
 			ini_set("memory_limit","50M");
 		

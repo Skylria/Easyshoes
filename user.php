@@ -1,12 +1,4 @@
-<?php
-session_start();
-if (!isset($_SESSION['logado'])){
-    $_SESSION['logado'] = false;
-    $_SESSION['usuario']= "";
-}
-if ($_SESSION['logado'] == false){
-    header("location:login.php");
-}
+<?php include 'exts/testalogado.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -18,8 +10,6 @@ if ($_SESSION['logado'] == false){
   </head>
   <body id="page-top">
     <?php include 'exts/pagetop.php';?>
-
-
     <section class="bg-primary" id="about">
       <div class="container">
         <div class="row">
@@ -30,9 +20,8 @@ if ($_SESSION['logado'] == false){
       </div>
     
     </section>
+    <?php include'select2.php'; include 'exts/javascripts.php'; ?>
+    
 
-        <?php include'select2.php';?>
-<?php include 'exts/javascripts.php';?>
 
-</body>
-</html>
+ ?>

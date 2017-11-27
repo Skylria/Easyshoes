@@ -5,132 +5,126 @@ if (!isset($_SESSION['logado'])){
     $_SESSION['usuario']= "";
 }
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 
   <head>
     <meta charset="utf-8">
     <title>EasyShoes</title>
-    <link href="css/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href='https://fonts.googleapis.com/   css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
-    <link href="css/vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
-    <link href="css/creative.min.css" rel="stylesheet">
+    <?php include ('exts/csshrefs.php'); ?>
+    <style> 
+    body{
+      text-align: center !important;
+      }
+      #contact {background-color: white !important; color:black !important}
+    h9{
+    color:white;}
+    .x{
+        font-size:30px;
+    }
+    </style>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.Jcrop.js"></script>
   </head>
-
   <body id="page-top">
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <?php include 'exts/pagetop.php' ?>
+<?php
+$host = "localhost";
+$usuario = "root";
+$l = $_SESSION['usuario'];
+$senha = "";
+$bd = "id3284881_cadastro";
+$strcon = mysqli_connect("$host","$usuario","$senha","$bd") or die('Erro ao conectar ao banco!');
+$sql = "SELECT * FROM cadastro";
+$resultado = mysqli_query($strcon, $sql) or die('Erro ao tentar cadastrar registro');
+$name = mysqli_query($strcon, "SELECT U_NOME, U_CPF, U_TELEFONE, U_EMAIL, U_LOGIN, U_SENHA, U_Foto FROM cadastro WHERE U_LOGIN = '$l'") or die(mysqli_error($strcon));
+$re = mysqli_fetch_array($name);
+
+$nome = $re['U_NOME'];
+$cpf = $re['U_CPF'];
+$telefone = $re['U_TELEFONE'];
+$email = $re['U_EMAIL'];
+$login = $re['U_LOGIN'];
+$s = $re['U_SENHA'];
+$foto = $re['U_Foto'];
+ 
+
+include 'bd/conexaogeral.php';
+?>
+<section class="bg-primary" id="about">
       <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top">EasyShoes</a>
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#about">Sobre a EasyShoes</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#services">Nossos Serviços</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#contact">Sobre Nós</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="produtos.php">Nossos Produtos</a>
-            </li>
-              <!--<li class="nav-item"><a class="nav-link js-scroll-trigger" href="produtos.php">Nossos Produtos</a></li>-->
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="pagina_funcionario.php">Página do Funcionário</a></li>
-              <?php if ( $_SESSION['logado'] == true ): ?>
-            <li class="nav-item">
-                  <a class="nav-link js-scroll-trigger" href="aboutuser.php"?> Usuário:  <?=$_SESSION['usuario']?></a></li>
-            <li class="nav-item">
-                  <a class="nav-link js-scroll-trigger" href="unlog.php"> Deslogar </a></li>
-              <?php endif ?>
-              <?php if ( $_SESSION['logado'] == false ): ?>
-              <li class="nav-item"><a class="nav-link js-scroll-trigger" href="login.php">Login</a>
-              <?php endif ?>
-            </li>
-          </ul>
+        <div class="row">
+          <div class="col-lg-8 mx-auto text-center">
+            <h2 class="section-heading text-white">Funcionário(a) <?= $_SESSION['usuario']?></h2>
+            <img src="uploads/<?=$foto?>" class="img-circle" width="250px">
+           </div>
         </div>
       </div>
-    </nav>
+</section>
 
+  <link rel="stylesheet" type="text/css" href="css/cadastro_produtos1.css">
+  
+      <p id="profile-name" class="profile-name-card"></p>
+  <form name="frm-jcrop" id="frm-jcrop" action="aboutuser2.php" method="POST" enctype="multipart/form-data">
+
+    <br>
     
-    <section class="bg-primary" id="about">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 mx-auto text-center">
-            <h2 class="section-heading text-white">Sobre: Funcionário(a) <?=$_SESSION['usuario']?> </h2>
-            <hr class="light">
-            <p class="text-faded"> A EasyShoes é uma WPA criada com o intuito de facilitar a vida e a venda dos vendedores de sapatarias. Com o sistema é possível verificar a disponibilidade, quantidade, numeração e setor onde o produto se encontra, diminuindo o tempo de espera e garantindo um atendimento mais rápido para o cliente.<br></p>
-            <h3 class="section-heading text-white">Missão:</h3>
-            <p class="text-faded">Promover o desenvolvimento das organizações,proporcionando aos nossos clientes agilidade,praticidade e eficácia no processo comercial, sempre trabalhando com excelência e inovação.</p>
-            <h3 class="section-heading text-white">Visão:</h3>
-            <p class="text-faded"> Disseminar a cultura digital, fornecendo soluções que facilitem o acesso à informação e à gestão. </p>
-            <h3 class="section-heading text-white">Valores:</h3>
-            <p class="text-faded"> Incentivar a transparência, o comprometimento e o respeito entre nossos funcionários, valorizar nossos clientes, atender suas necessidades e trabalhar com segurança,inovação e agilidade.</p>
-            <a class="btn btn-default btn-xl js-scroll-trigger" href="#services">E o que a EasyShoes pode acrescentar em minha empresa?</a>
-          </div>
-        </div>
-      </div>
-    </section>
+    Trocar Foto de Perfil: <input type="file" name="imagem">
+    <button  type="submit"><i class="fa fa-2x fa-upload sr-icons" title="Upload"></i></button>
 
-    <hr class="hr2">
-    <section id="contact">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 mx-auto text-center">
-            <h2 class="section-heading">Sobre Nós: </h2>
-            <hr class="primary">
-            <p>Projeto desenvolvido pelo 2º Período do Curso Informática para Internet - IPI, cadeira Projeto e Prática 1, do Professor e Orientador Alexandre Vianna. Alexandrevianna.net</p>
-            <p>Desenvolvedoras:</p>
-            <p>Bruna Rafaella De Oliveira Neves - IFPE CAMPUS IGARASSU <br> brunarafaellaneves@gmail.com </p>
-            <p>Milena Lins Basílio - IFPE CAMPUS IGARASSU <br>  milennab7@gmail.com </p>
-            <p>Jeislânia Oliveira da Silva - IFPE CAMPUS IGARASSU <br> laine.jos@gmail.com </p>
-          </div>
-        </div>
+  </form>
+  <br>
+
+  <div class="container">
+    
+    <p class="x"> Nome: </p>
+    <p><?=$nome?> <a onclick="funcNome()"> <i class="fa fa-lg fa-pencil" aria-hidden="true"></i></a></p>
+    <p id="alteranome"></p>
+    <p class="x"> Cpf: </p>
+    <p><?=$cpf?> <a onclick="funcCpf()"> <i class="fa fa-lg fa-pencil" aria-hidden="true"></i></a></p>
+    <p id="alteracpf"></p>
+    <p class="x"> Telefone: </p><br>
+    <p><?=$telefone?> <a onclick="funcTelefone()"> <i class="fa fa-lg fa-pencil" aria-hidden="true"></i></a></p>
+    <p id="alteratelefone"></p>
+    <p class="x"> Email: </p>
+    <p><?= $email ?><a onclick="funcEmail()"><i class="fa fa-lg fa-pencil" aria-hidden="true"></i></a></p>
+    <p id="alteraemail"></p>
+    <p class="x"> Login:</p>
+    <p><?=$login  ?> <a onclick="funcLogin()"> <i class="fa fa-lg fa-pencil" aria-hidden="true"></i></a></p>
+    <p id="alteralogin"></p>
+    <p class="x"> Senha: </p>
+    <p><?= $s ?><a onclick="funcSenha()"> <i class="fa fa-lg fa-pencil" aria-hidden="true"></i> </a></p>
+    <p id="alterasenha"></p>
+  </div>
         
-          <div class="mr-auto text-center">
-            <i class="fa fa-folder-open fa-5x sr-contact"></i>
-            <p>
-              <a href="https://github.com/Skylria/Easyshoes">Visite nosso Repositório no GitHub</a>
-            </p>
-          </div>
-        </div>
-      </div>
-            <center>
-              <div>
-                <h3 class="section-heading">Fique conectado!</h3>
-                <a href="https://www.facebook.com/">
-                  <i class="fa fa-4x fa-facebook-official" aria-hidden="true"></i>
-                </a>&nbsp;&nbsp;&nbsp;
-                <a href="https://web.whatsapp.com/">
-                  <i class="fa fa-4x fa-whatsapp" aria-hidden="true"></i>
-                </a>&nbsp;&nbsp;&nbsp;
-                <a href="https://twitter.com/login?lang=pt">
-                  <i class="fa fa-4x fa-twitter" aria-hidden="true"></i>
-                </a>&nbsp;&nbsp;&nbsp;
-                <a href="https://www.google.com/gmail/">
-                  <i class="fa fa-4x fa-google-plus-official" aria-hidden="true"></i>
-                </a><br>
-                <p></p>
-                Ou ligue para (+55)813564-1897
-              </div>
-            </center>
-    </section>
+<?php
 
-    <script src="css/vendor/jquery/jquery.min.js"></script>
-    <script src="css/vendor/popper/popper.min.js"></script>
-    <script src="css/vendor/bootstrap/js/bootstrap.min.js"></script>
-    <script src="css/vendor/jquery-easing/jquery.easing.min.js"></script>
-    <script src="css/vendor/scrollreveal/scrollreveal.min.js"></script>
-    <script src="css/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
-    <script src="js/creative.min.js"></script>
-
-  </body>
-
+mysqli_close($strcon);
+?>
+</table>
+<script>
+        function funcNome(){
+            var a = document.getElementById('alteranome').innerHTML="<form method='POST' action='useredit/editanome.php'> Novo Nome: <input type='text' name='nome'><input type='submit' value='salvar'></form>";
+        }
+        function funcCpf(){
+            var b = document.getElementById('alteracpf').innerHTML="<form method='POST' action='useredit/editacpf.php'> Novo Cpf: <input type='number' name='cpf'><input type='submit' value='salvar'></form>";
+        }
+        function funcTelefone(){
+            var c = document.getElementById('alteratelefone').innerHTML="<form method='POST' action='useredit/editatelefone.php'> Novo Telefone: <input type='number' name='telefone'><input type='submit' value='salvar'></form>";
+        }
+        function funcEmail(){
+            var d = document.getElementById('alteraemail').innerHTML="<form method='POST' action='useredit/editaemail.php'> Novo Email: <input type='email' name='email'><input type='submit' value='salvar'></form>";
+        }
+        function funcLogin(){
+            var e = document.getElementById('alteralogin').innerHTML="<form method='POST' action='useredit/editalogin.php'> Novo Login: <input type='text' name='login'><input type='submit' value='salvar'></form>";
+        }
+        function funcSenha(){
+            var f = document.getElementById('alterasenha').innerHTML="<form method='POST' action='useredit/editasenha.php'> Nova Senha: <input type='text' name='senha'><input type='submit' value='salvar'></form>";
+        }
+    </script>
+</body>
 </html>
+
+
+
+<?php include 'footer.php';?>
