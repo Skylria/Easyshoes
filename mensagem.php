@@ -4,7 +4,7 @@
 		<meta charset="utf-8">	
 		<style type="text/css">
 			.f{
-				background-color:  #fcd245;
+				background-color:  #ff8c00;
 			}
 			.ee{  font-family: Comic Sans, Comic Sans MS, cursive;
 			    font-size: 3em;
@@ -21,7 +21,7 @@
 			.ii{
 				cursor: pointer;
 			    text-align: center;
-			    background-color:#fcd245;
+			    background-color:#ff8c00;
 			    width: 10em;
 			}
 			.enviar {
@@ -35,7 +35,6 @@
 				  padding: 10px 20px 10px 20px;
 				  text-decoration: none;
 }
-
 			.enviar:hover {
 				  background: #101214;
 				  background-image: -webkit-linear-gradient(top, #101214, #d99734);
@@ -45,7 +44,6 @@
 				  background-image: linear-gradient(to bottom, #101214, #d99734);
 				  text-decoration: none;
 			}
-
 		</style>
 	</head>
 		    <body>
@@ -57,8 +55,10 @@
 				    		<br><br>
 							<p class="ee">Envie-nos uma mensagem!</p><br> <br>
 							<h3 class="zs">Digite sua mensagem no formulário abaixo:</h3><br> <br>
-							<form action="post.php" method="POST">
-								<textarea cols=120" rows="10" placeholder="*Sua Mensagem"></textarea><br> <br>
+							<form action="bd/conexao_mensagem.php" id="form" method="POST">
+							Texto:
+								<input type="textarea" name="texto" id="form" cols="120" rows="10" placeholder="*Sua Mensagem">
+								
 								<input type="submit" name="Enviar" class="enviar">
 							</form>
 						</div>
