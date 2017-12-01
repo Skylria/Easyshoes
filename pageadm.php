@@ -21,8 +21,7 @@ if($_SESSION['adm'] == false){
         <div class="row">
           <div class="col-lg-8 mx-auto text-center">
             <h2 class="section-heading text-white">Bem vindo(a), Administrador(a)!</h2>
-            <p class="text-faded"> Este espaço é onde você terá acesso ao balanço de venda dos produtos.</p>
-            <h3 class="section-heading text-white">Mais agilidade no seu atendimento. Aproveite!</h3><br>
+            <p class="text-faded"> Este espaço é onde você terá acesso ao balanço de venda dos produtos, assim como os usuários presentes.</p>
           </div>
         </div>
       </div>
@@ -32,13 +31,16 @@ if($_SESSION['adm'] == false){
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-center">
+              <details>
+  <summary>Ver mensagens</summary>
+  <?php include'select_mensagem.php'?>
+</details><br><br>
+              <a href="user.php">Usuários</a><br>
             <h2 class="section-heading">Vendidos:</h2>
           </div>
         </div>
       </div>
-
     </section>
-
       <link rel="stylesheet" type="text/css" href="css/produtos.css">
         <table class="quadrado">
             <tr>
@@ -55,9 +57,9 @@ if($_SESSION['adm'] == false){
             </tr>
         <?php
         $host = "localhost";
-        $usuario = "root";
-        $senha = "";
-        $bd = "id3284881_cadastro";
+        $usuario = "id3284797_easyshoes";
+        $senha = "123456";
+        $bd = "id3284797_login";
         $strcon = mysqli_connect("$host","$usuario","$senha","$bd") or die('Erro ao conectar ao banco!');
         $sql = "SELECT * FROM Vendas";
         $resultado = mysqli_query($strcon, $sql) or die('Erro ao tentar cadastrar registro');
