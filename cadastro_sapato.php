@@ -21,7 +21,7 @@
     
     <div class="login">
     <section id="services">
-        <form method="post" action="bd/conexao_produtos.php">
+       <form method="post" action="bd/conexao_produtos.php">
             <p class="principal">Selecione a Categoria Desejada:
             <p>Selecione a Categoria Do Produto*</p>
             <select name="categoria">
@@ -30,7 +30,7 @@
             $sql = "SELECT * FROM categoria";
             foreach ($conn->query($sql) as $registro) {
                 $id = $registro['id'];
-                $nome = $registro['nome'];
+                $nome = $registro['nome_cat'];
                 echo "<option value='".$id."'>".strtoupper($nome)."</option>";
             }
             ?>
@@ -47,8 +47,6 @@
             <input type="number" name="quantidade" placeholder="Ex: 20" required="required" />
             <p class="principal">Preço</p>
             <input type="number" step="0.01" name="preco" placeholder="Ex: 25,00" required="required" />
-            <p class="principal">Insira uma imagem</p>
-            <input type="file" name="imagem">
             <input type="submit" class="btn btn-primary btn-block btn-large" value="Cadastrar">
         </form>
       </div>
