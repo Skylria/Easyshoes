@@ -23,21 +23,17 @@
     <section id="services">
         <form method="post" action="bd/conexao_produtos.php">
             <p class="principal">Selecione a Categoria Desejada:
-            <select id="link" name="categoria"></p>
+            <p>Selecione a Categoria Do Produto*</p>
+            <select name="categoria">
             <?php
-          while($registro = mysqli_fetch_array($resultado)){
-              $nome = $registro['nome'];
-                $id = $registro['codigo'];
-            echo "<option value='".$id."'>".strtoupper($nome)."</option>";
-            } 
-          ?>
-               <option value="" selected>Categorias</option>
-               <option value="">Sandália</option>
-               <option value="">Sapato social</option>
-               <option value="">Saltos</option>
-               <option value="">Sapatilhas</option>
-               <option value="">Tênis</option>
-               <option value="">Bolsas</option>
+            include 'bd/conexaogeral.php';
+            $sql = "SELECT * FROM categoria";
+            foreach ($conn->query($sql) as $registro) {
+                $id = $registro['id'];
+                $nome = $registro['nome'];
+                echo "<option value='".$id."'>".strtoupper($nome)."</option>";
+            }
+            ?>
             </select>
             <p class="principal">Marca</p>
             <input type="text" name="marca" placeholder="Ex: Adidas" required="required" />
