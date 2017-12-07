@@ -1,14 +1,13 @@
 <?php  
-	include 'bd/conexaogeral.php';
-	$categoria = $_POST["categoria"];
+    $categoria = $_POST["categoria"];
 	$cor = $_POST["cor"];
 	$marca= $_POST["marca"];
 	$numero = $_POST["numero"];
 	$setor = $_POST["setor"];
 	$quantidade = $_POST["quantidade"];
 	$preco = $_POST["preco"];
-
-  $sql ="INSERT INTO Cadastro_produtos(cor, marca, numero, setor, quantidade, preco, categoria)
+	include 'conexaogeral.php';
+	$sql ="INSERT INTO Cadastro_produtos(cor, marca, numero, setor, quantidade, preco, id_cat)
   VALUES (:cor, :marca, :numero, :setor, :quantidade, :preco, :categoria)";
 
 	$stmt = $conn->prepare( $sql );
