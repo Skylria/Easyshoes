@@ -14,7 +14,7 @@
               <a class="nav-link js-scroll-trigger" href="#services">SERVIÇOS</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="produtos.php">NOSSOS PRODUTOS</a>
+              <!--<a class="nav-link js-scroll-trigger" href="produtos.php">NOSSOS PRODUTOS</a>-->
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="user.php">USUÁRIOS</a>
