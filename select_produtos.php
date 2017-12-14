@@ -5,10 +5,11 @@
         <title>Meus Produtos</title>
     </head>
     <body>
-        <form method="POST" action="busca.php">
+        <!--<form method="POST" action="busca.php">
           <input type="text" name="busca" size="20">
           <input type="submit" value="Buscar" name="ok">
-        </form>
+        </form>-->
+        <br>
         <table class="table table-striped">
             <tr>
                 <th>Categoria</th>
@@ -21,19 +22,11 @@
                 <th>Venda</th>
             </tr>
         <?php
-        $host = "localhost";
-        $usuario = "root";
-        $senha = "";
-        $bd = "id3284881_cadastro";
-        $strcon = mysqli_connect("$host","$usuario","$senha","$bd") or die('Erro ao conectar ao banco!');
-        $sql = "SELECT * FROM Cadastro_produtos";
-        $resultado = mysqli_query($strcon, $sql) or die('Erro ao tentar cadastrar registro');
-        $name = mysqli_query($strcon, "SELECT codigo, cor, marca, numero, setor, quantidade, preco, categoria FROM Cadastro_produtos") or die(mysqli_error($strcon));
-        $re = mysqli_fetch_array($name);
-        while($dados = mysqli_fetch_array($resultado)): ?>
-        
-        <?php
-        $categoria = $dados['categoria'];
+      require_once 'bd/conexaogeral.php';
+      $stmt = $conn->query("SELECT * FROM Cadastro_produtos, categoria where Cadastro_produtos.id_cat = categoria.id");
+        $cadastro = $stmt->fetchAll();
+        foreach ($cadastro as $dados) {
+        $categoria = $dados['nome_cat'];
         $codigo = $dados['codigo'];
         $cor = $dados['cor'];
         $marca = $dados['marca'];
@@ -52,10 +45,7 @@
                 <td><a href='bd/venda.php?id=".$codigo."'><i class='fa fa-2x fa-shopping-cart sr-icons' title='Vender Produto'></i></a></td>
                 
             </tr>";
-        ?>
-        <?php
-        endwhile;
-        mysqli_close($strcon);
+        }
         ?>
         </table>
     </body>
