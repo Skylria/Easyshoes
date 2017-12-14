@@ -1,4 +1,8 @@
-<?php include 'exts/testalogado.php';
+<?php 
+session_start();
+if ($_SESSION['adm']==false){
+    header('location:index.php');
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -14,7 +18,7 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-8 mx-auto text-center">
-            <h2 class="section-heading text-white">Lista de Usuários: </h2>
+            <h2 class="section-heading text-white">Usuários:</h2>
           </div>
         </div>
       </div>
