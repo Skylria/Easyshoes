@@ -39,7 +39,7 @@
 		 		<div class="col-lg-4">
 		 			<h4>Sobre</h4>
 		 			<div class="hline-w"></div>
-		 			<p>A EasyShoes é uma WPA criada com o intuito de facilitar a vida e a venda dos vendedores de sapatarias. Com o sistema é possível verificar a disponibilidade, quantidade, numeração e setor onde o produto se encontra, diminuindo o tempo de espera e garantindo um atendimento mais rápido para o cliente!</p>
+		 			<p> EasyShoes é um aplicativo criado com o intuito de facilitar a vida e a venda dos vendedores de sapatarias. Com o sistema é possível verificar a disponibilidade, quantidade, numeração e setor onde o produto se encontra, diminuindo o tempo de espera e garantindo um atendimento mais rápido para o cliente!</p>
 		 		</div>
 	
 		 		
