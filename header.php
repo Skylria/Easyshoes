@@ -12,12 +12,15 @@ if (!isset($_SESSION['logado'])){
     <meta charset="utf-8">
     <title>EasyShoes</title>
    <?php include ('css/plugsbootstrap.html'); ?>
-    <style> #contact {background-color: white !important; color:black !important}
+    <style>
+    <link href="css/footer.css" rel="stylesheet">
+    #contact {background-color: white !important; color:black !important}
     h9{
     color:white;}
     </style>
   </head>
   <body id="page-top">
+    
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
       <div class="container">
         <a class="navbar-brand js-scroll-trigger" href="index.php">EasyShoes</a>
@@ -62,4 +65,4 @@ if (!isset($_SESSION['logado'])){
         </div>
       </div>
     </nav>
-  <?php include'chat.php'?>
+  
