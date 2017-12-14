@@ -1,7 +1,7 @@
 <?php
 session_start();
-if($_SESSION['adm'] == false){
-    header('location:adm.php');
+if($_SESSION['cargo'] != "adm"){
+    header('location:login.php');
 }
 ?>
 <!DOCTYPE html>
@@ -31,17 +31,15 @@ if($_SESSION['adm'] == false){
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-center">
-              <details>
-  <summary>Ver mensagens</summary>
+              <h2 class="section-heading"><details>
+  <summary class="btn-primary btn-lg">Ver Mensagens</summary>
   <?php include'select_mensagem.php'?>
-</details><br><br>
-              <a href="user.php">Usuários</a><br>
-            <h2 class="section-heading">Vendidos:</h2>
-          </div>
-        </div>
-      </div>
-    </section>
-      <link rel="stylesheet" type="text/css" href="css/produtos.css">
+</details></h2><br><br>
+            <a type="button" class="btn-primary btn-lg" href="user.php">Acompanhar Usuarios</a><br><br>
+            <h2 class="section-heading">Produtos Vendidos:</h2>
+        
+      <details>
+      <summary class="btn-primary btn-lg">Mostrar</summary>
         <table class="quadrado">
             <tr>
                 
@@ -88,7 +86,7 @@ if($_SESSION['adm'] == false){
                 <td>"."$numero"."</td>
                 <td>"."$setor"."</td>
                 <td>"."$quantidade"."</td>
-                <td>"."$preco"."</td>
+                <td>"."$preco".",00</td>
                 
             </tr>";
         ?>
@@ -97,6 +95,10 @@ if($_SESSION['adm'] == false){
         mysqli_close($strcon);
         ?>
         </table>
+        </details>
+        
+    </section>
+      <link rel="stylesheet" type="text/css" href="css/produtos.css">
     </body>
 </html>
 
