@@ -17,9 +17,6 @@
               <!--<a class="nav-link js-scroll-trigger" href="produtos.php">NOSSOS PRODUTOS</a>-->
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="user.php">USUÁRIOS</a>
-            </li>
-            <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="equipe.php">EQUIPE</a>
             </li>
             <li class="nav-item">
@@ -37,7 +34,6 @@
             </li>
               <?php endif ?>
             
-            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="adm.php"><i class="fa fa-2x fa-gear sr-icons" title="Administração"></i></a></li>
           </ul>
         </div>
       </div>
