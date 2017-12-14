@@ -8,12 +8,12 @@
 	} catch(PDOException $e) {
 	    echo 'ERROR: ' . $e->getMessage();
 	}
-	$nome = $_POST["nome"];
-	$cpf = $_POST["cpf"];
-	$telefone = $_POST["telefone"];
-	$email = $_POST["email"];
-	$login = $_POST["login"];
-	$senha = $_POST["senha"];
+	$nome = htmlspecialchars($_POST["nome"]);
+	$cpf = htmlspecialchars($_POST["cpf"]);
+	$telefone = htmlspecialchars($_POST["telefone"]);
+	$email = htmlspecialchars($_POST["email"]);
+	$login = htmlspecialchars($_POST["login"]);
+	$senha = htmlspecialchars($_POST["senha"]);
 	$sql = "INSERT INTO cadastro(U_NOME,U_CPF,U_TELEFONE,U_EMAIL,U_LOGIN,U_SENHA) 
 		VALUES(:nome, :cpf, :telefone, :email, :login, :senha)";
 	$stmt = $conn->prepare( $sql );
