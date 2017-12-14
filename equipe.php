@@ -18,7 +18,7 @@
     </section>
     <section id="services">
 		 	<div class="row centered">
-		 		<div class="col-lg-2 col-md-2 col-sm-2"></div>
+		 		<div class="col-lg-3 col-md-3 col-sm-3"></div>
 			 	<div class="col-lg-3.5 col-md-3.5 col-sm-3.5">
 					<img src="img/bru.jpg" width="300px" alt="">
 					<h4>Bruna Neves</h4></h4>
