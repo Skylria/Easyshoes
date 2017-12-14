@@ -30,10 +30,10 @@ if (!isset($_SESSION['logado'])){
     <?php include 'exts/pagetop.php' ?>
 <?php
 $host = "localhost";
-$usuario = "root";
+$usuario = "id3284797_easyshoes";
 $l = $_SESSION['usuario'];
-$senha = "";
-$bd = "id3284881_cadastro";
+$senha = "123456";
+$bd = "id3284797_login";
 $strcon = mysqli_connect("$host","$usuario","$senha","$bd") or die('Erro ao conectar ao banco!');
 $sql = "SELECT * FROM cadastro";
 $resultado = mysqli_query($strcon, $sql) or die('Erro ao tentar cadastrar registro');
@@ -55,7 +55,7 @@ include 'bd/conexaogeral.php';
       <div class="container">
         <div class="row">
           <div class="col-lg-8 mx-auto text-center">
-            <h2 class="section-heading text-white">Funcionário(a) <?= $_SESSION['usuario']?></h2>
+            <h2 class="section-heading text-white">USUÁRIO(a) <?= $_SESSION['usuario']?></h2>
             <img src="uploads/<?=$foto?>" class="img-circle" width="250px">
            </div>
         </div>
