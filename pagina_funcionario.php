@@ -1,4 +1,18 @@
-<?php include 'exts/testalogado.php';?>
+<?php 
+include 'exts/testalogado.php';
+if ($_SESSION['logado'] == false){
+    header('location:login.php');
+}
+if($_SESSION['cargo'] != "funcionario"){
+    if($_SESSION['cargo'] == "adm"){
+        header('location:pageadm.php');
+    }
+    elseif($_SESSION['cargo'] == "NAO DEFINIDO"){
+        header('location:usuarionaodefinido.php');
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,6 +20,7 @@
     <meta charset="utf-8">
     <title>EasyShoes</title>
     <?php include 'exts/csshrefs.php';?>
+  <link rel="stylesheet" type="text/css" href="css/input.css">
   </head>
 
   <body id="page-top">
@@ -25,14 +40,40 @@
     <section id="services">
       <div class="container">
         <div class="row">
-          <div class="col-lg-12 text-center">
-            <h2 class="section-heading">Produtos: </h2>
-            <a type="button" class="btn-primary btn-lg" href="cadastro_sapato.php">Cadastrar Novo Produto</a><br>
+         
+              
+<form method="POST" action="pesquisar_cor.php">
+	<input class="css-input"  type="text" name="pesquisa" placeholder="Buscar Cor">
+	<input  class="x" type="submit" value="Buscar"><br>
+</form> 
+<form  method="POST" action="pesquisar_marca.php">
+	<input class="css-input" type="text" name="pesquisa" placeholder="Buscar Marca">
+	<input class="x" type="submit" value="Buscar"><br>
+</form>
+<form method="POST" action="pesquisar_numero.php">
+	<input class="css-input" type="text" name="pesquisa" placeholder="Buscar Número">
+	<input class="x" type="submit" value="Buscar"><br>
+</form>
+<form method="POST" action="pesquisar_setor.php">
+	<input class="css-input" type="text" name="pesquisa" placeholder="Buscar Setor">
+	<input class="x" type="submit" value="Buscar"><br>
+</form>
+<form method="POST" action="pesquisar_categoria.php">
+	<input class="css-input" type="text" name="pesquisa" placeholder="Buscar Categoria">
+	<input class="x" type="submit" value="Buscar"><br>
+</form>
+
+<center>
+    <br><br>
+<h2 class="section-heading">Produtos: </h2>
+            <a type="button" class="btn-primary btn-lg" href="cadastro_sapato.php">Cadastrar Novo Produto</a><br><br>
             <?php include 'select_produtos.php'; ?>
+            </center>
           </div>
         </div>
       </div>
     </section>
+     <?php include 'mensagem.php';?>
 
     <?php include 'footer.php'; include 'exts/javascripts.php';?>
   </body>
