@@ -26,9 +26,6 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-8 mx-auto text-center">
-            <h2 class="section-heading text-white">O que é a EasyShoes? </h2>
-            <hr class="light">
-            <p class="text-faded"> A EasyShoes é uma WPA criada com o intuito de facilitar a vida e a venda dos vendedores de sapatarias. Com o sistema é possível verificar a disponibilidade, quantidade, numeração e setor onde o produto se encontra, diminuindo o tempo de espera e garantindo um atendimento mais rápido para o cliente.<br></p>
             <h3 class="section-heading text-white">Missão:</h3>
             <p class="text-faded">Promover o desenvolvimento das organizações,proporcionando aos nossos clientes agilidade,praticidade e eficácia no processo comercial, sempre trabalhando com excelência e inovação.</p>
             <h3 class="section-heading text-white">Visão:</h3>
@@ -83,7 +80,7 @@
         </div>
       </div>
     </section>
-    <hr class="hr2">
+ 
     
     <?php include 'footer.php'; include 'exts/javascripts.php';?>
   </body>
