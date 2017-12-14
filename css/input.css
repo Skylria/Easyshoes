@@ -1,6 +1,6 @@
  .css-input { 
    display: inline-block;
-     border-width:5px; border-radius:34px; padding:9px; font-size:14px; border-style:groove; box-shadow: 3px 3px 8px 0px rgba(42,42,42,.75); text-shadow:0px 0px 0px rgba(42,42,42,.75); border-color:#b89960;  } 
+     border-width:5px; border-radius:34px; padding:7px; font-size:14px; border-style:groove; box-shadow: 3px 3px 8px 0px rgba(42,42,42,.75); text-shadow:0px 0px 0px rgba(42,42,42,.75); border-color:#b89960;  } 
 		 .css-input:focus { outline:none; } 
 		 
         .x{
@@ -16,7 +16,3 @@
   text-decoration: none;
 }
 
-.x:hover {
-  background: #c92e12;
-  text-decoration: none;
-}
