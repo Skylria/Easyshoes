@@ -19,7 +19,7 @@
 				font-size: 2em;
 			}
 			.ii{
-				cursor: pointer;
+				
 			    text-align: center;
 			    background-color:#ff8c00;
 			    width: 10em;
@@ -55,12 +55,14 @@
 				    		<br><br>
 							<p class="ee">Envie-nos uma mensagem!</p><br> <br>
 							<h3 class="zs">Digite sua mensagem no formulário abaixo:</h3><br> <br>
+							<textarea rows="5" cols="100" name="texto" form="form"></textarea>
 							<form action="bd/conexao_mensagem.php" id="form" method="POST">
-							Texto:
-								<input type="textarea" name="texto" id="form" cols="120" rows="10" placeholder="*Sua Mensagem">
-								
+							<br><br><br>
 								<input type="submit" name="Enviar" class="enviar">
 							</form>
+							<p>&nbsp</p>
+							<p>&nbsp</p>
+							<p>&nbsp</p>
 						</div>
 			    </center>
 			</body>
