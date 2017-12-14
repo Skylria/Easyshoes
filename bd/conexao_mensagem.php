@@ -1,12 +1,10 @@
 <?php
 session_start();
-$id = $_GET['id'];
 date_default_timezone_set('America/Sao_Paulo');
 $data = date("d/m/Y"); 
 $hora = date("H:i:s");
-$usuario = $_SESSION['usuario'];
+$user = $_SESSION['usuario'];
 $texto = $_POST['texto'];
-
 	$host = "localhost";
     $dbname = "id3284797_login";
     $usuario="id3284797_easyshoes";
@@ -18,11 +16,11 @@ $texto = $_POST['texto'];
         echo 'ERROR: ' . $e->getMessage();
     }
 	
-	$sql = "INSERT INTO mensagem(data, hora, usuario,texto) VALUES(?, ?, ?)";
+	$sql = "INSERT INTO mensagem(data, hora, usuario,texto) VALUES(?, ?, ?, ?)";
 	$stmt = $conn->prepare( $sql );
 	$stmt->bindParam(1, $data );
 	$stmt->bindParam(2, $hora );
-	$stmt->bindParam(3,$usuario );
+	$stmt->bindParam(3,$user );
 	$stmt->bindParam(4, $texto);
 
 	$result = $stmt->execute();
