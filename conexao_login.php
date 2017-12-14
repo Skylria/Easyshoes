@@ -1,5 +1,6 @@
 <?php
 
+
 $dbname = "id3284881_cadastro";
 	$usuario="id3284881_ifpe";
 	$senha = "123456";
