@@ -78,7 +78,7 @@ if($_SESSION['cargo'] != "funcionario"){
 <?php
 
 $buscar = $_POST['pesquisa'];
-$data = $conn->query("SELECT * FROM Cadastro_produtos WHERE quantidade LIKE '%".$buscar."%'");
+$data = $conn->query("SELECT * FROM Cadastro_produtos, categoria WHERE Cadastro_produtos.id_cat = categoria.id and quantidade LIKE '%".$buscar."%'");
 echo "<table>";
 echo"  <tr>
 <th>Categoria</th>
@@ -91,7 +91,7 @@ echo"  <tr>
 foreach($data as $row) {
   echo "
   <tr>
-  <td>".$row['id_cat']."</td>
+  <td>".$row['nome_cat']."</td>
   <td>".$row['marca']."</td>
   <td>".$row['cor']."</td>
   <td>".$row['numero']."</td>
