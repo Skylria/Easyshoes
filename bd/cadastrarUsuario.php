@@ -9,14 +9,14 @@
 	    echo 'ERROR: ' . $e->getMessage();
 	}
 
-	$nome = $_POST["nome_da_empresa"];
-	$cpf = $_POST["cpf"];
-	$telefone = $_POST["telefone_da_empresa"];
-	$cnpj = $_POST["cnpj_da_empresa"];
-	$logradouro = $_POST["logradouro_da_empresa"];
-	$email = $_POST["email_da_empresa"];
-	$login = $_POST["login_da_empresa"];
-	$senha = $_POST["senha_da_empresa"];
+	$nome =  htmlspecialchars($_POST["nome_da_empresa"]);
+	$cpf =  htmlspecialchars($_POST["cpf"]);
+	$telefone =  htmlspecialchars($_POST["telefone_da_empresa"]);
+	$cnpj =  htmlspecialchars($_POST["cnpj_da_empresa"]);
+	$logradouro =  htmlspecialchars($_POST["logradouro_da_empresa"]);
+	$email =  htmlspecialchars($_POST["email_da_empresa"]);
+	$login =  htmlspecialchars($_POST["login_da_empresa"]);
+	$senha =  htmlspecialchars($_POST["senha_da_empresa"]);
 
 	$sql = "INSERT INTO usuarios(USER_NOME,USER_CPF,USER_TELEFONE,USER_CNPJ,USER_LOGRADOURO,USER_EMAIL,USER_LOGIN,USER_SENHA) 
 		VALUES(:nome, :cpf, :telefone, :email, :login, :senha)";
