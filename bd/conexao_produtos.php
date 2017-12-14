@@ -1,11 +1,11 @@
 <?php  
     $categoria = $_POST["categoria"];
-	$cor = $_POST["cor"];
-	$marca= $_POST["marca"];
-	$numero = $_POST["numero"];
-	$setor = $_POST["setor"];
-	$quantidade = $_POST["quantidade"];
-	$preco = $_POST["preco"];
+	$cor = htmlspecialchars($_POST["cor"]);
+	$marca= htmlspecialchars($_POST["marca"]);
+	$numero = htmlspecialchars($_POST["numero"]);
+	$setor = htmlspecialchars($_POST["setor"]);
+	$quantidade = htmlspecialchars($_POST["quantidade"]);
+	$preco = htmlspecialchars($_POST["preco"]);
 	include 'conexaogeral.php';
 	$sql ="INSERT INTO Cadastro_produtos(cor, marca, numero, setor, quantidade, preco, id_cat)
   VALUES (:cor, :marca, :numero, :setor, :quantidade, :preco, :categoria)";
