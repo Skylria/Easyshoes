@@ -15,7 +15,7 @@ if($_SESSION['cargo'] != "funcionario"){
     <title>EasyShoes</title>
      <link rel="stylesheet" type="text/css" href="css/input.css">
      <link rel="stylesheet" type="text/css" href="css/produtos.css">
-    <head>
+    
      <?php include 'exts/csshrefs.php';?>
   </head>
 
@@ -34,30 +34,31 @@ if($_SESSION['cargo'] != "funcionario"){
     </section>
 
  <section id="services">
-      <div class="container">
+      <<div class="container">
         <div class="row">
-          <div class="col-lg-12 text-center">
+         
               
-<form method="POST" action="pesquisar_cor.php">
-  <input class="css-input" type="text" name="pesquisa" placeholder="Buscar Cor">
-  <input  class="x" type="submit" value="Buscar">
+<form class="" method="POST" action="pesquisar_cor.php">
+	<input class="css-input"  type="text" name="pesquisa" placeholder="Buscar Cor">
+	<input  class="x" type="submit" value="Buscar"><br>
+</form> 
+<form  class="" method="POST" action="pesquisar_marca.php">
+	<input class="css-input" type="text" name="pesquisa" placeholder="Buscar Marca">
+	<input class="x" type="submit" value="Buscar"><br>
 </form>
-<form method="POST" action="pesquisar_marca.php">
-  <input class="css-input" type="text" name="pesquisa" placeholder="Buscar Marca">
-  <input class="x" type="submit" value="Buscar">
+<form  class="" method="POST" action="pesquisar_numero.php">
+	<input class="css-input" type="text" name="pesquisa" placeholder="Buscar Número">
+	<input class="x" type="submit" value="Buscar"><br>
 </form>
-<form method="POST" action="pesquisar_numero.php">
-  <input class="css-input" type="text" name="pesquisa" placeholder="Buscar Número">
-  <input class="x" type="submit" value="Buscar">
-</form>
-<form method="POST" action="pesquisar_setor.php">
-  <input class="css-input" type="text" name="pesquisa" placeholder="Buscar Setor">
-  <input class="x" type="submit" value="Buscar">
+<form class="" method="POST" action="pesquisar_setor.php">
+	<input class="css-input" type="text" name="pesquisa" placeholder="Buscar Setor">
+	<input class="x" type="submit" value="Buscar"><br>
 </form>
 <form method="POST" action="pesquisar_categoria.php">
-  <input class="css-input" type="text" name="pesquisa" placeholder="Buscar Categoria">
-  <input class="x" type="submit" value="Buscar">
+	<input class="css-input" type="text" name="pesquisa" placeholder="Buscar Categoria">
+	<input class="x" type="submit" value="Buscar"><br>
 </form>
+
 </div>
 <center>
     <br><br>
@@ -72,6 +73,7 @@ if($_SESSION['cargo'] != "funcionario"){
     </section>
      
 <?php include 'bd/conexaogeral.php'; ?>
+ 
  
 <?php
 
