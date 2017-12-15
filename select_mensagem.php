@@ -1,22 +1,21 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html>
     <head>
-    
-      <link rel="stylesheet" type="text/css" href="css/produtos.css">
-      </head>
-        <table class="quadrado">
+     </head>
+     <body>
+        <table>
             <tr>
-                <th>Data</th>
-                <th>Hora</th>
-                <th>Usuário</th>
-                <th>Texto</th>
+                <th style="background-color:#ea8457!important;padding=8px!important">Data</th>
+                <th style="background-color:#ea8457!important;padding=8px!important">Hora</th>
+                <th style="background-color:#ea8457!important;padding=8px!important">Usuário</th>
+                <th style="background-color:#ea8457!important;padding=8px!important">Texto</th>
                 
             </tr>
         <?php
         $host = "localhost";
-        $usuario = "id3284797_easyshoes";
-        $senha = "123456";
+        $usuario = "root";
+        $senha = "";
         $bd = "id3284797_login";
         $strcon = mysqli_connect("$host","$usuario","$senha","$bd") or die('Erro ao conectar ao banco!');
         $sql = "SELECT * FROM mensagem";

@@ -1,8 +1,5 @@
 <?php  
-	$dbname = "id3284797_login";
-	$usuario="id3284797_easyshoes";
-	$senha = "123456";
-	$conn = new PDO('mysql:host=localhost;dbname=id3284797_login', $usuario, $senha);
+	include 'conexaogeral.php';
 	$nome = htmlspecialchars($_POST['nome']);
 	$cpf =  htmlspecialchars($_POST['cpf']);
 	$telefone =  htmlspecialchars($_POST['telefone']);

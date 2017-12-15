@@ -1,13 +1,5 @@
 <?php  
-	$dbname = "id3284797_login";
-	$usuario="id3284797_easyshoes";
-	$senha = "123456";
-	try {
-	  	$conn = new PDO("mysql:host=localhost;dbname=$dbname", $usuario, $senha);
-	    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-	} catch(PDOException $e) {
-	    echo 'ERROR: ' . $e->getMessage();
-	}
+	include 'conexaogeral.php';
 
 	$nome =  htmlspecialchars($_POST["nome_da_empresa"]);
 	$cpf =  htmlspecialchars($_POST["cpf"]);

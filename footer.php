@@ -1,37 +1,5 @@
 <head>
-<style type="text/css">
-.hline {
-	border-bottom: 2px solid #384452;
-}
-
-.hline-w {
-	border-bottom: 2px solid #ffffff;
-	margin-bottom: 25px;
-}
-#footerwrap {
-	padding-top: 60px;
-	padding-bottom: 60px;
-	background: orangered;
-}
-
-#footerwrap p {
-	color: white;
-}
-
-#footerwrap h4 {
-	color: white;
-}
-
-#footerwrap i {
-	font-size: 30px;
-	color: white;
-	padding-right: 25px;
-}
-
-#footerwrap i:hover {
-	color: #00b3fe;
-}
-</style>
+<link rel="stylesheet" type="text/css" href="css/footer.css">
 </head>
 <div id="footerwrap">
 	 	<div class="container">
@@ -39,31 +7,26 @@
 		 		<div class="col-lg-4">
 		 			<h4>Sobre</h4>
 		 			<div class="hline-w"></div>
-		 			<p> EasyShoes é um aplicativo criado com o intuito de facilitar a vida e a venda dos vendedores de sapatarias. Com o sistema é possível verificar a disponibilidade, quantidade, numeração e setor onde o produto se encontra, diminuindo o tempo de espera e garantindo um atendimento mais rápido para o cliente!</p>
+		 			<p> EasyShoes é um aplicativo criado com o intuito de facilitar a vida e a venda dos vendedores de sapatarias. Com o sistema, é possível verificar a disponibilidade, quantidade, numeração e setor onde o produto se encontra, diminuindo o tempo de espera e garantindo um atendimento mais rápido para o cliente!</p>
 		 		</div>
 	
 		 		
 		 		<div class="col-lg-4">
-		 			<h4>Redes Socias</h4>
+		 			<h4>Desenvolvedoras</h4>
 		 			<div class="hline-w"></div>
-		 			<h4>Não perca tempo conecte-se já!</h4>
-		 			<p>
-		 				<a href="https://github.com/brunaneves7/Easyshoes"><i class="fa fa-github" aria-hidden="true"></i></a>
-		 				<a href="#"><i class="fa fa-dribbble"></i></a>
-		 				<a href="#"><i class="fa fa-facebook"></i></a>
-		 				<a href="#"><i class="fa fa-twitter"></i></a>
-		 				<a href="#"><i class="fa fa-instagram"></i></a>
-		 				<a href="#"><i class="fa fa-tumblr"></i></a>
+		 			<p>Bruna Rafaella</p>
+		 			<p>Jeislania Oliveira</p>
+		 			<p>Milena Lins</p>
+		 			<p>Acompanhe o Nosso Repositório no GitHub: <a href="https://github.com/brunaneves7/Easyshoes"><i class="fa fa-github" aria-hidden="true"></i></a>
 		 			</p>
 		 		</div>
 		 		<div class="col-lg-4">
-		 			<h4>Local</h4>
+		 			<h4>Mais sobre o Site</h4>
 		 			<div class="hline-w"></div>
-		 			<p>
-		 				IFPE, Igarassu,<br/>
-		 				23890, Pernambuco,<br/>
-		 				Brasil.<br/>
-		 			</p>
+		 			    <p>Matéria: Projeto e Prática I</p>
+		 			    <p>Orientador: Alexandre Vianna </p>
+		 				<p>Desenvolvido em: IFPE Campus Igarassu</p>
+		 				<p>Pernambuco, Brasil.</p>
 		 		</div>
 		 	
 		 	</div>

@@ -1,14 +1,11 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="utf-8">
         <link rel="stylesheet" type="text/css" href="css/produtos.css">
         <title>Meus Produtos</title>
     </head>
     <body>
-        <!--<form method="POST" action="busca.php">
-          <input type="text" name="busca" size="20">
-          <input type="submit" value="Buscar" name="ok">
-        </form>-->
         <br>
         <table class="table table-striped">
             <tr>

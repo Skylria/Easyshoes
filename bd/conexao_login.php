@@ -2,10 +2,7 @@
 session_start();
 $_SESSION['usuario'] = "";
 $_SESSION['logado']=false;
-$host = "localhost";
-$username="id3284797_easyshoes";
-$password = "123456";
-$conn = new PDO('mysql:host=localhost;dbname=id3284797_login', $username, $password);
+include "conexaogeral.php";
 $login = $_POST['usuario'];
 $senha = $_POST['senha'];
 $stmt = $conn->prepare('SELECT * FROM cadastro WHERE U_LOGIN = ? AND U_SENHA = ?');

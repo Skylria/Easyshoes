@@ -3,8 +3,8 @@
         <?php
         $id = $_GET['id'];
         $host = "localhost";
-        $usuario = "id3284797_easyshoes";
-        $senha = "123456";
+        $usuario = "root";
+        $senha = "";
         $bd = "id3284797_login";
         $strcon = mysqli_connect("$host","$usuario","$senha","$bd") or die('Erro ao conectar ao banco!');
         $sql = "SELECT * FROM cadastro WHERE U_id = $id";

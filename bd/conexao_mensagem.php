@@ -5,16 +5,7 @@ $data = date("d/m/Y");
 $hora = date("H:i:s");
 $user = $_SESSION['usuario'];
 $texto = $_POST['texto'];
-	$host = "localhost";
-    $dbname = "id3284797_login";
-    $usuario="id3284797_easyshoes";
-    $senha = "123456";
-    try {
-      	$conn = new PDO("mysql:host=localhost;dbname=$dbname", $usuario, $senha);
-        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    } catch(PDOException $e) {
-        echo 'ERROR: ' . $e->getMessage();
-    }
+	include 'conexaogeral.php';
 	
 	$sql = "INSERT INTO mensagem(data, hora, usuario,texto) VALUES(?, ?, ?, ?)";
 	$stmt = $conn->prepare( $sql );
