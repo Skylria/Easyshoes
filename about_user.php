@@ -4,7 +4,6 @@ include 'exts/testalogado.php';
 <!DOCTYPE html>
 <html>
   <head>
-
     <meta charset="utf-8">
     <title>EasyShoes - Usuário</title>
     <?php include ('exts/csshrefs.php'); ?>
@@ -15,7 +14,7 @@ include 'exts/testalogado.php';
   <body id="page-top">
 
     <?php include 'exts/pagetop.php' ?>
-    <?php include 'dadosusuario.php';?>
+    <?php include 'data_user.php';?>
     
     <script type="text/javascript" src="js/editafunc.js"></script>
     <?php include 'footer.php';?>

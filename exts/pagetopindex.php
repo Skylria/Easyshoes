@@ -9,25 +9,25 @@
           <ul class="navbar-nav ml-auto">
 
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="index.php">SOBRE</a>
+              <a class="nav-link js-scroll-trigger" href="#about">SOBRE</a>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="index.php">SERVIÇOS</a>
+              <a class="nav-link js-scroll-trigger" href="#services">SERVIÇOS</a>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="equipe.php">EQUIPE</a>
+              <a class="nav-link js-scroll-trigger" href="team.php">EQUIPE</a>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="pagina_funcionario.php">PÁGINA DO FUNCIONÁRIO</a>
+              <a class="nav-link js-scroll-trigger" href="employee_page.php">PÁGINA DO FUNCIONÁRIO</a>
             </li>
 
             <?php if ( $_SESSION['logado'] == true ): ?>
 
               <li class="nav-item">
-                  <a class="nav-link js-scroll-trigger" href="aboutuser.php"?><i class="fa fa-2x fa-user-circle-o sr-icons" title="Deslogar"></i> USUÁRIO:  <?=$_SESSION['usuario']?></a>
+                  <a class="nav-link js-scroll-trigger" href="about_user.php"?><i class="fa fa-2x fa-user-circle-o sr-icons" title="Deslogar"></i> USUÁRIO:  <?=$_SESSION['usuario']?></a>
               </li>
                    
               <li class="nav-item">

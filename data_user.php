@@ -1,10 +1,6 @@
 <?php
-    $host = "localhost";
-    $usuario = "root";
+    include 'bd/conexao_mysqli.php';
     $l = $_SESSION['usuario'];
-    $senha = "";
-    $bd = "id3284797_login";
-    $strcon = mysqli_connect("$host","$usuario","$senha","$bd") or die('Erro ao conectar ao banco!');
     $sql = "SELECT * FROM cadastro";
     $resultado = mysqli_query($strcon, $sql) or die('Erro ao tentar cadastrar registro');
     $name = mysqli_query($strcon, "SELECT U_NOME, U_CPF, U_TELEFONE, U_EMAIL, U_LOGIN, U_SENHA, U_Foto FROM cadastro WHERE U_LOGIN = '$l'") or die(mysqli_error($strcon));

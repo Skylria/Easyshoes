@@ -37,18 +37,17 @@ if($_SESSION['cargo'] != "adm"){
                     <h2 class="section-heading">
                         <details>
                             <summary class="btn-primary btn-lg"> Ver </summary>
-                            <?php include'select_mensagem.php';?>
+                            <?php include'selects/select_messages.php';?>
                         </details>
                     </h2>
                     <br><br>
                     <h2 class="section-heading">Produtos Vendidos:</h2>
                         <details>
                             <summary class="btn-primary btn-lg">Mostrar</summary>
-                                <?php include 'select_p_vendidos.php'; ?>
-            </details>
-            
+                                <?php include 'selects/select_p_solds.php'; ?>
+            </details>  
         </section>
-      <link rel="stylesheet" type="text/css" href="css/produtos.css">
+      <link rel="stylesheet" type="text/css" href="css/products.css">
     </body>
 </html>
 

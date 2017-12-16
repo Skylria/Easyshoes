@@ -1,25 +1,28 @@
 <?php 
 include 'exts/testalogado.php';
+
 if ($_SESSION['logado'] == false){
     header('location:login.php');
 }
+
 if($_SESSION['cargo'] != "funcionario"){
     if($_SESSION['cargo'] == "adm"){
-        header('location:pageadm.php');
+        header('location:page_adm.php');
     }
+
     elseif($_SESSION['cargo'] == "NAO DEFINIDO"){
-        header('location:usuarionaodefinido.php');
+        header('location:user_not_defined.php');
     }
 }
 ?>
 
 <!DOCTYPE html>
 <html>
-
   <head>
+
     <meta charset="utf-8">
     <title>EasyShoes</title>
-     <link rel="stylesheet" type="text/css" href="css/input.css">
+    <link rel="stylesheet" type="text/css" href="css/input.css">
     <?php include 'exts/csshrefs.php';?>
     <style>
         .x {
@@ -32,15 +35,16 @@ if($_SESSION['cargo'] != "funcionario"){
           background: white;
           padding: 8px 16px 8px 16px;
           text-decoration: none;
-}
-.x:hover {
-  background: #db8f7d;
-  text-decoration: none;
-}
+        }
+        .x:hover {
+          background: #db8f7d;
+          text-decoration: none;
+        }
     </style>
-  </head>
 
+  </head>
   <body id="page-top">
+
     <?php include 'exts/pagetop.php';?>
     <section id="services">
       <div class="container">
@@ -58,39 +62,36 @@ if($_SESSION['cargo'] != "funcionario"){
       <div class="container">
         <div class="row">
             <div>
-                <form method="POST" action="pesquisar_cor.php">
+                <form method="POST" action="filtersearch/pesquisar_cor.php">
                   <input class="css-input"  type="text" name="pesquisa" placeholder="Buscar Cor">
                   <input  class="x" type="submit" value="Buscar"><br>
                 </form> <br>
             </div>
-                <form  method="POST" action="pesquisar_marca.php">
+                <form  method="POST" action="filtersearch/pesquisar_marca.php">
                   <input class="css-input" type="text" name="pesquisa" placeholder="Buscar Marca">
                   <input class="x" type="submit" value="Buscar"><br>
                 </form><br>
-                <form method="POST" action="pesquisar_categoria.php">
+                <form method="POST" action="filtersearch/pesquisar_categoria.php">
                   <input class="css-input"  type="text" name="pesquisa" placeholder="Buscar Categoria">
                   <input  class="x" type="submit" value="Buscar"><br>
                 </form> <br>
-                <form method="POST" action="pesquisar_numero.php">
+                <form method="POST" action="filtersearch/pesquisar_numero.php">
                   <input class="css-input"  type="text" name="pesquisa" placeholder="Buscar Numero">
                   <input  class="x" type="submit" value="Buscar"><br>
-</form> <br>
+                </form> <br>
 
-
-
-<center>
-    <br><br>
-<h2 class="section-heading">Produtos: </h2>
-            <a type="button" class="btn-primary btn-lg" href="cadastro_sapato.php">Cadastrar Novo Produto</a><br><br>
-            <?php include 'select_produtos.php'; ?>
+            <center>
+              <br><br>
+              <h2 class="section-heading">Produtos: </h2>
+              <a type="button" class="btn-primary btn-lg" href="product_register.php">Cadastrar Novo Produto</a><br><br>
+              <?php include 'selects/select_products.php'; ?>
             </center>
           </div>
         </div>
       </div>
     </section>
-     <?php include 'mensagem.php';?>
 
-    <?php include 'footer.php'; include 'exts/javascripts.php';?>
+     <?php include 'message.php'; include 'footer.php'; include 'exts/javascripts.php';?>
   </body>
 
 </html>

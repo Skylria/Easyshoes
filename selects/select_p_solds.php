@@ -15,11 +15,7 @@
                 <th style="background-color:#ea8457!important;">Preço</th>
             </tr>
         <?php
-        $host = "localhost";
-        $usuario = "root";
-        $senha = "";
-        $bd = "id3284797_login";
-        $strcon = mysqli_connect("$host","$usuario","$senha","$bd") or die('Erro ao conectar ao banco!');
+        include 'bd/conexao_mysqli.php';
         $sql = "SELECT * FROM Vendas";
         $resultado = mysqli_query($strcon, $sql) or die('Erro ao tentar cadastrar registro');
         $name = mysqli_query($strcon, "SELECT v_data, v_hora, v_vendedor, p_cor, p_marca, p_numero, p_setor, p_quantidade, p_preco FROM Vendas") or die(mysqli_error($strcon));

@@ -1,6 +1,6 @@
 <?php 
 session_start();
-if ($_SESSION['adm']==false){
+if ($_SESSION['cargo']!="adm"){
     header('location:index.php');
 }
 ?>
@@ -14,7 +14,7 @@ if ($_SESSION['adm']==false){
   </head>
   <body id="page-top">
     <?php include 'exts/pagetop.php';?>
-    <section class="bg-primary" id="about">
+    <section id="services">
       <div class="container">
         <div class="row">
           <div class="col-lg-8 mx-auto text-center">
@@ -24,8 +24,4 @@ if ($_SESSION['adm']==false){
       </div>
     
     </section>
-    <?php include'select2.php'; include 'exts/javascripts.php'; ?>
-    
-
-
- ?>
+    <?php include'selects/select_data_user.php'; include 'exts/javascripts.php'; ?>

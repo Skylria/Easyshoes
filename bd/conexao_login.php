@@ -17,12 +17,7 @@ else {
         $_SESSION['logado']= true;
         $_SESSION['cargo'] = $dados['U_CARGO'];
         $_SESSION['usuario'] = $dados['U_LOGIN'];
-        if($dados['U_CARGO'] == "adm"){
-            header('location:../pageadm.php');
-        }
-        else{
-            header('location:../pagina_funcionario.php');
-        }
+        header('location:../employee_page.php');
 }        
 ?>
 </body>

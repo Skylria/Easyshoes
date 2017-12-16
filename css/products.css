@@ -2,9 +2,14 @@
     box-sizing: border-box;
     font-family: arial;
 } 
+p{
+    margin-bottom: 0px;
+}
 
 table {
     border-collapse: collapse;
+    margin-right:auto; 
+    margin-left:auto; 
 }
 
 th {
@@ -31,4 +36,5 @@ table th {
     background-color:black;
     color: white;
 }
+
 

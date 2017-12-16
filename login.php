@@ -31,7 +31,7 @@
       </form><br>
       
       <p class="principal">NÃO É CADASTRADO(A)?</p>
-      <a class="btn btn-primary btn-block btn-large" href="cadastro.php">CADASTRE-SE</a>
+      <a class="btn btn-primary btn-block btn-large" href="register.php">CADASTRE-SE</a>
     </div>
     
     <script  src="js/index.js"></script>
